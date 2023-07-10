@@ -1,0 +1,12 @@
+.carousel{
+  height: 35rem;
+  width: 87.4rem;
+  max-width: 100%;
+  display: flex;
+  overflow-y: hidden;
+  gap: 1.56rem;
+  justify-content: space-between;
+  overflow-x: hidden;
+  margin: 1.25rem auto 0 auto;
+  position: relative;
+}

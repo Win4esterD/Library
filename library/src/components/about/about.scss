@@ -1,0 +1,18 @@
+@import '../../styles/mixins.scss';
+
+.section-header{
+  @include sectionHeader();
+  margin-top: 1.25rem;
+}
+
+.about__separation-line{
+  margin-top: 1.25rem;
+}
+
+.about__description{
+  margin-top: 2.5rem;
+}
+
+.section-description{
+  @include sectionDescription();
+}

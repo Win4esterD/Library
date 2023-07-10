@@ -1,4 +1,4 @@
-import './styles/App.css';
+import './styles/App.scss';
 import './styles/mixins.scss';
 import Header from './components/header/Header';
 import Greetings from './components/greetings/Greetings';
