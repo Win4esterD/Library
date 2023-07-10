@@ -1,0 +1,6 @@
+.greetings{
+  background: url('../../../public/assets/img/backgrounds/welcome.png');
+  height: 37.5rem;
+  background-size: cover;
+  background-position: center;
+}
