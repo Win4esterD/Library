@@ -2,7 +2,6 @@
 
 .section-header{
   @include sectionHeader();
-  margin-top: 1.25rem;
 }
 
 .about__separation-line{
@@ -13,6 +12,6 @@
   margin-top: 2.5rem;
 }
 
-.section-description{
-  @include sectionDescription();
+.about__header{
+  margin-top: 1.25rem;
 }

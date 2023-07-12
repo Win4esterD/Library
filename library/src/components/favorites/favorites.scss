@@ -1,0 +1,73 @@
+@import '../../styles/mixins.scss';
+
+.favorites__header{
+  margin-top: 3.2rem;
+}
+
+.favorites__separation-line{
+  margin-top: 1.25rem;
+}
+
+.favorites__pick{
+  @include sectionDescription();
+  text-align: left;
+  font-weight: 700;
+  margin-top: 1.9rem;
+  padding-left: 1.3rem;
+}
+
+.favorites__seasons{
+  display: flex;
+  gap: 5.62rem;
+  margin-top: 1.6rem;
+  padding-left: 1.4rem;
+}
+
+
+.favorites__button-wrapper:hover{
+  cursor: pointer;
+}
+
+.favorites__radio{
+  width: 1.0625rem;
+  height: 1.0625rem;
+  cursor: pointer;
+  stroke-width: 2px;
+  stroke: #000;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 1px;
+}
+
+.favorites__radio:after{
+  width: 1.0625rem;
+  height: 1.0625rem;
+  position: relative;
+  top: 4px;
+  left: 3px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: #0C0C0E;
+}
+
+.favorites__radio:checked:after{
+  width: 11px;
+  height: 11px;
+  border-radius: 1rem;
+  background-color: #0C0C0E;
+  content: '';
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  content: '';
+}
+
+.favorites__radio-label{
+  @include sectionDescription();
+  padding-left: 1.25rem;
+}
+
+#favorites__radio-label_checked{
+  font-weight: 700;
+}

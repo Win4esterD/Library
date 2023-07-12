@@ -18,10 +18,16 @@ h1{
   top: 1.2rem;
 }
 
+.navigation-panel{
+  position: absolute;
+  right: 5.63rem;
+  top: 1.4rem;
+}
+
 .navigation-panel__elements-wrapper{
   display: flex;
   gap: 1.875rem;
-  margin-left: 15px;
+  /* margin-left: 15px; */
 }
 
 .navigation-panel__links{
@@ -32,12 +38,6 @@ h1{
   font-weight: 400;
   line-height: 3.125rem;
   text-decoration: none;
-}
-
-.navigation-panel{
-  position: absolute;
-  right: 5.63rem;
-  top: 1.4rem;
 }
 
 .profile-icon{

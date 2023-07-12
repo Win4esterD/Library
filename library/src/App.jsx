@@ -3,6 +3,7 @@ import './styles/mixins.scss';
 import Header from './components/header/Header';
 import Greetings from './components/greetings/Greetings';
 import About from './components/about/About';
+import Favorites from './components/favorites/Favorites';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Greetings />
         <About />
+        <Favorites />
       </main>
     </>
   );
