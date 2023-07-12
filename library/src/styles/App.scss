@@ -9,3 +9,10 @@
 .section-description{
   @include sectionDescription();
 }
+
+.button{
+  width: 4.6875rem;
+  height: 1.875rem;
+  color: #0C0C0E;
+  @include button();
+}

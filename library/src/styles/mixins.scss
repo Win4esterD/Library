@@ -31,3 +31,24 @@
   font-weight: 400;
   line-height: 2.5rem;
 }
+
+@mixin bookFont($fontWeight){
+  color: #000;
+  font-family: Inter;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: $fontWeight;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+}
+
+@mixin button(){
+  text-align: center;
+  font-family: Inter;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  background-color: #fff;
+}

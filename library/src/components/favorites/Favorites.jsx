@@ -31,6 +31,52 @@ const Favorites = () => {
             <label className="favorites__radio-label" htmlFor="autumn-button">Autumn</label>
           </div>
         </div>
+        <div className="books">
+          <div className="books__book-block">
+            <p className="book_staff">Staff Picks</p>
+            <hr className="book__line"/>
+            <h3 className='book__name'>THE BOOK EATERS</h3>
+            <p className="book__author">By Sunyi Dean</p>
+            <p className="book__review">
+            An unusual Sci-Fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+            </p>
+            <button className="button book__button">Buy</button>
+            <img className="book__cover" src="./assets/img/books/book1.png" alt="book" />
+          </div>
+          <div className="books__book-block">
+            <p className="book_staff">Staff Picks</p>
+            <hr className="book__line"/>
+            <h3 className='book__name'>THE BOOK EATERS</h3>
+            <p className="book__author">By Sunyi Dean</p>
+            <p className="book__review">
+            An unusual Sci-Fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+            </p>
+            <button className="button book__button">Buy</button>
+            <img className="book__cover" src="./assets/img/books/book1.png" alt="book" />
+          </div>
+          <div className="books__book-block">
+            <p className="book_staff">Staff Picks</p>
+            <hr className="book__line"/>
+            <h3 className='book__name'>THE BOOK EATERS</h3>
+            <p className="book__author">By Sunyi Dean</p>
+            <p className="book__review">
+            An unusual Sci-Fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+            </p>
+            <button className="button book__button">Buy</button>
+            <img className="book__cover" src="./assets/img/books/book1.png" alt="book" />
+          </div>
+          <div className="books__book-block">
+            <p className="book_staff">Staff Picks</p>
+            <hr className="book__line"/>
+            <h3 className='book__name'>THE BOOK EATERS</h3>
+            <p className="book__author">By Sunyi Dean</p>
+            <p className="book__review">
+            An unusual Sci-Fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+            </p>
+            <button className="button book__button">Buy</button>
+            <img className="book__cover" src="./assets/img/books/book1.png" alt="book" />
+          </div>
+        </div>
       </section>
     )
 }
