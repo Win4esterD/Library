@@ -1,7 +1,7 @@
 import './styles/App.scss';
 import './styles/mixins.scss';
 import Header from './components/header/Header';
-import Greetings from './components/greetings/Greetings';
+import Welcome from './components/welcome/Welcome';
 import About from './components/about/About';
 import Favorites from './components/favorites/Favorites';
 
@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <main>
-        <Greetings />
+        <Welcome />
         <About />
         <Favorites />
       </main>

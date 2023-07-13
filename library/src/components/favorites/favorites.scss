@@ -85,6 +85,7 @@
   padding-left: 1.2rem;
 }
 
+
 .books__book-block{
   width: 34.375rem;
   height: 34.6875rem;
@@ -109,6 +110,7 @@
 
 .book__name{
   margin-top: 1rem;
+  text-transform: uppercase;
 }
 
 .book__name, .book__author{
@@ -116,8 +118,26 @@
   text-align: left;
   position: relative;
   left: 1.2rem;
-  width: 11rem;
+  width: 100%;
 }
+
+.books__book-block:nth-child(3), .books__book-block:nth-child(4){
+  position: relative;
+  top: 0.3rem;
+
+  .book_staff{
+    margin-top: 1.1rem;
+  }
+
+  .book__review{
+    width: 22.3rem;
+  }
+
+  .book__line{
+    top: -0.3rem;
+  }
+}
+
 
 .book__review{
   @include bookFont(400);
@@ -135,7 +155,14 @@
 }
 
 .book__button{
-  position: relative;
-  margin-top: 1rem;
+  position: absolute;
+  bottom: 1rem;
   left: 1.2rem;
+}
+
+#book__button_active{
+  border-color: #BB945F;
+  color: #BB945F;
+  border-radius: 1px;
+  border-bottom-color: #BB945F;
 }

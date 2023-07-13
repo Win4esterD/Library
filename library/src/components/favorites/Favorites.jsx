@@ -1,4 +1,6 @@
 import './favorites.scss';
+import booksCollections from './seasons.json';
+
 
 const Favorites = () => {
     return(
@@ -35,46 +37,46 @@ const Favorites = () => {
           <div className="books__book-block">
             <p className="book_staff">Staff Picks</p>
             <hr className="book__line"/>
-            <h3 className='book__name'>THE BOOK EATERS</h3>
-            <p className="book__author">By Sunyi Dean</p>
+            <h3 className='book__name'>{booksCollections.autumn.book1.bookName}</h3>
+            <p className="book__author">{booksCollections.autumn.book1.bookAuthor}</p>
             <p className="book__review">
-            An unusual Sci-Fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+            {booksCollections.autumn.book1.bookReview}       
             </p>
             <button className="button book__button">Buy</button>
-            <img className="book__cover" src="./assets/img/books/book1.png" alt="book" />
+            <img className="book__cover" src={booksCollections.autumn.book1.bookPicture} alt="book" />
           </div>
           <div className="books__book-block">
             <p className="book_staff">Staff Picks</p>
             <hr className="book__line"/>
-            <h3 className='book__name'>THE BOOK EATERS</h3>
-            <p className="book__author">By Sunyi Dean</p>
+            <h3 className='book__name'>{booksCollections.autumn.book2.bookName}</h3>
+            <p className="book__author">{booksCollections.autumn.book2.bookAuthor}</p>
             <p className="book__review">
-            An unusual Sci-Fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+            {booksCollections.autumn.book2.bookReview}       
             </p>
             <button className="button book__button">Buy</button>
-            <img className="book__cover" src="./assets/img/books/book1.png" alt="book" />
+            <img className="book__cover" src={booksCollections.autumn.book2.bookPicture} alt="book" />
           </div>
           <div className="books__book-block">
             <p className="book_staff">Staff Picks</p>
             <hr className="book__line"/>
-            <h3 className='book__name'>THE BOOK EATERS</h3>
-            <p className="book__author">By Sunyi Dean</p>
+            <h3 className='book__name'>{booksCollections.autumn.book3.bookName}</h3>
+            <p className="book__author">{booksCollections.autumn.book3.bookAuthor}</p>
             <p className="book__review">
-            An unusual Sci-Fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+              {booksCollections.autumn.book3.bookReview}  
             </p>
             <button className="button book__button">Buy</button>
-            <img className="book__cover" src="./assets/img/books/book1.png" alt="book" />
+            <img className="book__cover" src={booksCollections.autumn.book3.bookPicture} alt="book" />
           </div>
           <div className="books__book-block">
             <p className="book_staff">Staff Picks</p>
             <hr className="book__line"/>
-            <h3 className='book__name'>THE BOOK EATERS</h3>
-            <p className="book__author">By Sunyi Dean</p>
+            <h3 className='book__name'>{booksCollections.autumn.book4.bookName}</h3>
+            <p className="book__author">{booksCollections.autumn.book4.bookAuthor}</p>
             <p className="book__review">
-            An unusual Sci-Fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+            {booksCollections.autumn.book4.bookReview}       
             </p>
-            <button className="button book__button">Buy</button>
-            <img className="book__cover" src="./assets/img/books/book1.png" alt="book" />
+            <button className="button book__button" id="book__button_active">Own</button>
+            <img className="book__cover" src={booksCollections.autumn.book4.bookPicture} alt="book" />
           </div>
         </div>
       </section>

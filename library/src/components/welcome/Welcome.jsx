@@ -1,6 +1,6 @@
-import './greetings.css';
+import './welcome.css';
 
-const Greetings = () => {
+const Welcome = () => {
   return(
     <section className="greetings">
       <h2 className="greetings__header">Welcome <br></br>to the Brooklyn Library</h2>
@@ -8,4 +8,4 @@ const Greetings = () => {
   )
 }
 
-export default Greetings;
+export default Welcome;
