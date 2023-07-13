@@ -1,5 +1,10 @@
 @import '../../styles/mixins.scss';
 
+// .favorites{
+//   display: flex;
+//   justify-content: center;
+// }
+
 .favorites__header{
   margin-top: 3.2rem;
 }
@@ -10,17 +15,18 @@
 
 .favorites__pick{
   @include sectionDescription();
-  text-align: left;
   font-weight: 700;
   margin-top: 1.9rem;
-  padding-left: 1.3rem;
+  position: relative;
+  right: 36.4rem;
 }
 
 .favorites__seasons{
   display: flex;
   gap: 5.62rem;
   margin-top: 1.6rem;
-  padding-left: 1.4rem;
+  position: relative;
+  right: 21.9rem;
 }
 
 
@@ -73,16 +79,15 @@
 }
 
 .books{
-  max-width: 100%;
-  width: 94.6%;
+  width: 85.1rem;
+  max-width: 97%;
   position: relative;
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
-  // padding: 0rem 0rem 0rem 0rem;
-  padding-left: 1.2rem;
+  left: -1.2rem;
 }
 
 

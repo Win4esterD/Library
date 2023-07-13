@@ -16,3 +16,8 @@
   color: #0C0C0E;
   @include button();
 }
+
+.aligner{
+  display: flex;
+  justify-content: center;
+}

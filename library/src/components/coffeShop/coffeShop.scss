@@ -10,17 +10,19 @@
 
 .coffe-shop__description{
   @include sectionDescription();
-  font-size: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  // padding: 0 1rem;
   margin-top: 2.6rem;
-  letter-spacing: 0.11rem;
+  letter-spacing: 0.125rem;
+  width: 85.1rem;
+  max-width: 100%;
 }
 
 .menus{
   display: flex;
   gap: 29.3rem;
   margin-top: 2.5rem;
+  position: relative;
+  right: 0.5rem;
 }
 
 
