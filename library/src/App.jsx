@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import Welcome from './components/welcome/Welcome';
 import About from './components/about/About';
 import Favorites from './components/favorites/Favorites';
+import CoffeShop from './components/coffeShop/CoffeShop';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Welcome />
         <About />
         <Favorites />
+        <CoffeShop />
       </main>
     </>
   );
