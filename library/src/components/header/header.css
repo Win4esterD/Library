@@ -5,6 +5,13 @@ header {
   height: 5.625rem;
 }
 
+.header__aligner{
+  display: flex;
+  gap: 15.6rem;
+  position: relative;
+  top: 1.2rem;
+}
+
 h1{
   color: #FFF;
   font-family: Forum;
@@ -13,22 +20,20 @@ h1{
   font-weight: 400;
   line-height: 3.125rem;
   letter-spacing: 0.0375rem;
-  position: absolute;
   left: 1.2rem;
   top: 1.2rem;
 }
 
 .navigation-panel{
-  position: absolute;
-  right: 5.63rem;
-  top: 1.4rem;
+  position: relative;
+  left: 12.93rem;
 }
 
 .navigation-panel__elements-wrapper{
   display: flex;
   gap: 1.875rem;
-  /* margin-left: 15px; */
 }
+
 
 .navigation-panel__links{
   color: #FFF;
@@ -40,8 +45,12 @@ h1{
   text-decoration: none;
 }
 
+.navigation-panel__links:hover{
+  transition: .5s;
+  text-decoration: underline;
+  color: #BB945F;
+}
+
 .profile-icon{
-  position: absolute;
-  right: 1.25rem;
-  top: 1.94rem;
+  cursor: pointer;
 }

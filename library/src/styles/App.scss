@@ -17,7 +17,17 @@
   @include button();
 }
 
+.button:hover{
+  cursor: pointer;
+  transition: 1.3s;
+  background-color: #BB945F;
+}
+
 .aligner{
   display: flex;
   justify-content: center;
+}
+
+section {
+  scroll-behavior: smooth;
 }

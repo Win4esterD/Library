@@ -2,7 +2,7 @@ import './libraryCard.scss';
 
 const LibraryCard = () => {
     return(
-      <section className="library-card">
+      <section className="library-card" id="library-card">
         <h2 className="section-header library-card__header">
           Digital Library Cards
         </h2>

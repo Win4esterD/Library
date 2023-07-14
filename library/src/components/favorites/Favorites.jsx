@@ -4,7 +4,7 @@ import booksCollections from './seasons.json';
 
 const Favorites = () => {
     return(
-      <section className="favorites">
+      <section className="favorites" id="favorites">
         <h2 className="favorites__header section-header">
           Favorites
         </h2>
@@ -78,7 +78,7 @@ const Favorites = () => {
               <p className="book__review">
               {booksCollections.autumn.book4.bookReview}       
               </p>
-              <button className="button book__button" id="book__button_active">Own</button>
+              <button disabled className="button book__button" id="book__button_active">Own</button>
               <img className="book__cover" src={booksCollections.autumn.book4.bookPicture} alt="book" />
             </div>
           </div>

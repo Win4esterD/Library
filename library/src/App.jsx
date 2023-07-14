@@ -7,6 +7,7 @@ import Favorites from './components/favorites/Favorites';
 import CoffeShop from './components/coffeShop/CoffeShop';
 import Contacts from './components/contacts/Contacts';
 import LibraryCard from './components/libraryCard/LibraryCard';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Contacts />
         <LibraryCard />
       </main>
+      <Footer />
     </>
   );
 }

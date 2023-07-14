@@ -2,7 +2,7 @@ import './coffeShop.scss';
 
 const CoffeShop = () => {
     return(
-      <section className="coffe-shop">
+      <section className="coffe-shop" id="coffe-shop">
         <h2 className="coffe-shop__header section-header">
           Coffee Shop
         </h2>

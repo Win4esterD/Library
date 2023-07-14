@@ -2,7 +2,7 @@ import './contacts.scss'
 
 const Contacts = () => {
   return (
-    <section className="contacts">
+    <section className="contacts" id="contacts">
       <h2 className="contacts__header section-header">
         Our Contacts
       </h2>
@@ -12,7 +12,7 @@ const Contacts = () => {
           <div className="contacts__adress">
             <p className="contacts__adress-header">For all Library inquiries:</p>
             <div className="contacts__inquiries-wrapper">
-              <p className="contacts__adress-and-number">Please call <a className="contacts__link" href="(617)730-2370">(617) 730-2370</a></p>
+              <p className="contacts__adress-and-number">Please call <a className="contacts__link" href="tel:(617)730-2370">(617) 730-2370</a></p>
               <p className="contacts__adress-and-number">For TTY service, please call <a className="contacts__link" href="tel:+(617)730-2370">(617) 730-2370</a></p>
               <p className="contacts__adress-and-number">Putterham Library: <a className="contacts__link" href="tel:+(617)730-2385">(617) 730-2385</a></p>
             </div>

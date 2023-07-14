@@ -3,7 +3,7 @@ import Carousel from './carousel/Caorusel';
 
 const About = () => {
     return(
-      <section className="about">
+      <section className="about" id="about">
         <h2 className="about__header section-header">
           About
         </h2>

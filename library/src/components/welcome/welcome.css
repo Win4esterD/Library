@@ -7,9 +7,21 @@
   top: -1px;
 }
 
+.greetings__background{
+  background: #0C0C0E;
+  display: flex;
+  width: 37.5rem;
+  height: 13.75rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 14rem;
+  right: 26.3rem;
+}
+
 .greetings__header{
   width: 23rem;
-  position: absolute;
+  /* position: absolute; */
   top: 16rem;
   left: 7rem;
   color: #FFF;
