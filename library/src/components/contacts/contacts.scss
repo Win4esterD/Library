@@ -1,0 +1,49 @@
+@import '../../styles/mixins.scss';
+
+.contacts__adress-and-map{
+  display: flex;
+  gap: 12.5rem;
+  margin-top: 2.5rem;
+}
+
+.contacts__header{
+  margin-top: 3.7rem;
+}
+
+.contacts__separation-line{
+  margin-top: 1.25rem;
+}
+
+.contacts__inquiries-wrapper{
+  margin-top: 2.5rem;
+}
+
+.contacts__staff-wrapper{
+  margin-top: 2.5rem;
+}
+
+.contacts__adress-and-number{
+  margin-top: 1.25rem;
+}
+
+
+.contacts__adress-header{
+  @include contactHeader();
+  text-align: left;
+}
+
+.contacts__adress-and-number{
+  @include sectionDescription();
+  text-transform: capitalize;
+  text-align: left;
+  letter-spacing: 0.125rem;
+}
+
+.contacts__link{
+  text-decoration: none;
+  color: #000;
+}
+
+.contacts__director{
+  font-weight: 700;
+}

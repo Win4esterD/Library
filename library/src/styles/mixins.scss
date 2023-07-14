@@ -53,3 +53,15 @@
   background-color: #fff;
   border: 1px solid;
 }
+
+@mixin contactHeader(){
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem; /* 200% */
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
