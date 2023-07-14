@@ -5,4 +5,9 @@
 
 button{
   border: none;
+  background-color: #FFF;
+}
+
+input{
+  border: none;
 }

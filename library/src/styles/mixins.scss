@@ -65,3 +65,12 @@
   letter-spacing: 0.125rem;
   text-transform: capitalize;
 }
+
+@mixin formFont(){
+  font-family: Forum;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem; /* 166.667% */
+  letter-spacing: 0.0375rem;
+}

@@ -1,0 +1,160 @@
+@import '../../styles/mixins.scss';
+
+.library-card__aligner{
+  margin-top: 2.5rem;
+  gap: 19.9rem;
+}
+
+.library-card__header{
+  margin-top: 3.46rem;
+}
+
+.library-card__separation-line{
+  margin-top: 1.25rem;
+}
+
+
+.form-block__header{
+  color: #000;
+  font-family: Inter;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+  text-align: center;
+}
+
+.form-border{
+  width: 37.3125rem;
+  height: 23.9375rem;
+  border: 3px solid #BB945F;
+  background: #FFF;
+  margin-top: 1.88rem;
+}
+
+.library-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.library-form__inputs{
+  margin: 1.25rem auto 0 auto;
+  width: 35rem;
+  height: 17rem;
+  background-color: #BB945F;
+  display: flex;
+  flex-direction: column;
+}
+
+.library-form__input:nth-child(3){
+  margin-top: 1.56rem;
+}
+
+.library-form__description{
+  @include formFont();
+  max-width: 90%;
+  margin-top: 1.25rem;
+}
+
+.library-form__input{
+  width: 32.5rem;
+  height: 4.125rem;
+  border-radius: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.library-form__description, .library-form__input{
+  position: relative;
+  left: 1.25rem;
+}
+
+.library-form__input::placeholder{
+  @include formFont();
+  color: #8E8E8E;
+  padding-left: 1.25rem;
+  position: relative;
+  top: 0.2rem;
+}
+
+.library-form__input:focus{
+  @include formFont();
+}
+
+
+.library-form__button{
+  @include contactHeader();
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  line-height: normal;
+  border-radius: 0.125rem;
+  border: 1px solid #0C0C0E;
+  background-color: #FFF;
+  margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15.125rem;
+  height: 2.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.library-form__button:hover{
+  cursor: pointer;
+  background-color: #BB945F;
+  transition: 1.3s;
+}
+
+.get-card{
+  width: 30rem;
+  max-width: 100%;
+}
+
+.get-card__call-to-action{
+  @include formFont();
+  color: #000;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+  text-align: right;
+}
+
+.get-card__description{
+  @include sectionDescription();
+  letter-spacing: 0.025rem;
+  text-align: right;
+  margin-top: 2.19rem;
+}
+
+.get-card__buttons{
+  display: flex;
+  gap: 1.25rem;
+  justify-content: flex-end;
+  margin-top: 2.25rem;
+}
+
+.get-card__button{
+  border-radius: 0.125rem;
+  border: 1px solid #0C0C0E;
+  display: flex;
+  width: 4.6875rem;
+  height: 1.875rem;
+  padding: 0.625rem 0rem;
+  justify-content: center;
+  align-items: center;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: Inter;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+}
+
+.get-card__button:hover{
+  cursor: pointer;
+  transition: 1.3s;
+  background-color: #BB945F;
+}
