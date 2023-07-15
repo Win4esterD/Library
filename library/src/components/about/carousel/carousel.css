@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.carousel__img{
+  transition: 1s;
+}
+
 .togglers{
   display: flex;
   justify-content: center;

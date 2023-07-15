@@ -11,6 +11,7 @@ import Footer from './components/footer/Footer';
 
 
 function App() {
+  console.log('100 points');
   return (
     <>
       <Header />
