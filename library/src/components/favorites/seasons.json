@@ -1,5 +1,5 @@
 {
-  "autumn": {
+  "winter": {
     "book1": {
       "id": 1,
       "bookName": "The Book Eaters",
@@ -27,6 +27,96 @@
       "bookAuthor": "By Clive Irving",
       "bookReview": "A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.",
       "bookPicture": "./assets/img/books/book4.png"
+    }
+  },
+  "spring": {
+    "book1": {
+      "id": 1,
+      "bookName": "The Body",
+      "bookAuthor": "By Stephen King",
+      "bookReview": "Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss of innocence that is youth.",
+      "bookPicture": "./assets/img/books/book5.png"
+    },
+    "book2": {
+      "id": 2,
+      "bookName": "Carry: A Memoir of Survival on Stolen Land",
+      "bookAuthor": "By Toni Jenson",
+      "bookReview": "This memoir about the author's relationship with gun violence feels both expansive and intimate, resulting in a lyrical indictment of the way things are.",
+      "bookPicture": "./assets/img/books/book6.png"
+    },
+    "book3": {
+      "id": 3,
+      "bookName": "Days of Distraction",
+      "bookAuthor": "By Alexandra Chang",
+      "bookReview": "A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.",
+      "bookPicture": "./assets/img/books/book7.png"
+    },
+    "book4": {
+      "id": 4,
+      "bookName": "Dominicana",
+      "bookAuthor": "By Angie Cruz",
+      "bookReview": "A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.",
+      "bookPicture": "./assets/img/books/book8.png"
+    }
+  },
+  "summer": {
+    "book1": {
+      "id": 1,
+      "bookName": "Crude: A Memoir",
+      "bookAuthor": "By Pablo Fajardo & ​​Sophie Tardy-Joubert",
+      "bookReview": "Drawing and color by Damien Roudeau | This book illustrates the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco company for damage their oil fields did to the Amazon and her people",
+      "bookPicture": "./assets/img/books/book9.png"
+    },
+    "book2": {
+      "id": 2,
+      "bookName": "Let My People Go Surfing",
+      "bookAuthor": "By Yvon Chouinard",
+      "bookReview": "Chouinard—climber, businessman, environmentalist—shares tales of courage and persistence from his experience of founding and leading Patagonia, Inc. Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.",
+      "bookPicture": "./assets/img/books/book10.png"
+    },
+    "book3": {
+      "id": 3,
+      "bookName": "The Octopus Museum: Poems By Brenda",
+      "bookAuthor": "By Brenda Shaughnessy",
+      "bookReview": "This collection of bold and scathingly beautiful feminist poems imagines what comes after our current age of environmental destruction, racism, sexism, and divisive politics.",
+      "bookPicture": "./assets/img/books/book11.png"
+    },
+    "book4": {
+      "id": 4,
+      "bookName": "Shark Dialogues: A Novel",
+      "bookAuthor": "By Kiana Davenport",
+      "bookReview": "An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.",
+      "bookPicture": "./assets/img/books/book12.png"
+    }
+  },
+  "autumn": {
+    "book1": {
+      "id": 1,
+      "bookName": "Casual Conversation",
+      "bookAuthor": "By Renia White",
+      "bookReview": "White's impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don't, examining the possibilities around how we construct and communicate identity.",
+      "bookPicture": "./assets/img/books/book13.png"
+    },
+    "book2": {
+      "id": 2,
+      "bookName": "The Great Fire",
+      "bookAuthor": "By Lou Ureneck",
+      "bookReview": "The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide",
+      "bookPicture": "./assets/img/books/book14.png"
+    },
+    "book3": {
+      "id": 3,
+      "bookName": "Rickey: The Life and Legend",
+      "bookAuthor": "By Howard Bryant",
+      "bookReview": "With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?",
+      "bookPicture": "./assets/img/books/book15.png"
+    },
+    "book4": {
+      "id": 4,
+      "bookName": "Slug: And Other Stories",
+      "bookAuthor": "By Megan Milks",
+      "bookReview": "Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.",
+      "bookPicture": "./assets/img/books/book16.png"
     }
   }
 }

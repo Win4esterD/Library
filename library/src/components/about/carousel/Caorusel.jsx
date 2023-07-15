@@ -42,7 +42,7 @@ const Carousel = () => {
           <div className="togglers__external" onClick={
             () => {
               setValue('third');
-              setShift({transform: 'translateX(-200%)'});
+              setShift({transform: 'translateX(-210%)'});
             }
             }
             >
