@@ -20,8 +20,6 @@ h1{
   font-weight: 400;
   line-height: 3.125rem;
   letter-spacing: 0.0375rem;
-  left: 1.2rem;
-  top: 1.2rem;
 }
 
 .navigation-panel{
@@ -43,12 +41,6 @@ h1{
   font-weight: 400;
   line-height: 3.125rem;
   text-decoration: none;
-}
-
-.navigation-panel__links:hover{
-  transition: .5s;
-  text-decoration: underline;
-  color: #BB945F;
 }
 
 .profile-icon{

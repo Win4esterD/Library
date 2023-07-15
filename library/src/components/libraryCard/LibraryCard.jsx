@@ -19,7 +19,7 @@ const LibraryCard = () => {
                     Brooklyn Public Library
                   </p>
                   <input className="library-form__input" type="text" placeholder="Reader's name "/>
-                  <input className="library-form__input" type="text" placeholder="Card number"/>
+                  <input className="library-form__input" type="text" pattern='\d{4,4}-\d{4,4}-\d{4,4}-\d{4,4}' placeholder="Card number"/>
                 </div>
                 <button className="library-form__button">
                   Check the card

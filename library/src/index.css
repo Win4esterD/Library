@@ -14,4 +14,10 @@ input{
 
 html {
   scroll-behavior: smooth;
-  }
+}
+
+a:hover{
+  transition: .5s;
+  text-decoration: underline;
+  color: #BB945F;
+}

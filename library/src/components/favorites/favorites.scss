@@ -32,6 +32,9 @@
 
 .favorites__button-wrapper:hover{
   cursor: pointer;
+  background: #BB945F;
+  transition: .5s;
+  border-radius: 0.4rem;
 }
 
 .favorites__radio{
