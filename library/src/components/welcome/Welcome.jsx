@@ -5,7 +5,7 @@ const Welcome = () => {
     <section className="greetings">
       <div className="aligner">
         <div className="greetings__background">
-          <p className="greetings__header">Welcome <br></br>to the Brooklyn Library</p>
+          <h3 className="greetings__header">Welcome <br></br>to the Brooklyn Library</h3>
         </div>
       </div>
     </section>
