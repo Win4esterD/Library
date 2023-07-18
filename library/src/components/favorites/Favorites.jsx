@@ -6,6 +6,7 @@ import { useState } from 'react';
 const Favorites = () => {
   const [season, setSeason] = useState('winter');
   const selecterCircleId = 'favorites__radio-label_checked';
+  const customRadioId = "custom-radio_active";
 
   function determineSelectedCircle(seasonValue){
     if(seasonValue === season){
@@ -31,11 +32,20 @@ const Favorites = () => {
                 defaultChecked type="radio"
                 name="season"
                 id="winter-button"
-                onClick={() => {
-                  setSeason('winter');
+                onClick={(event) => {
+                  setSeason('winter', event.target);
                   }
                 }
               />
+
+              <img 
+                className="custom-radio"
+                  id={season === 'winter'? customRadioId: undefined}
+                  src="./assets/img/icons/checked.svg"
+                  alt="" 
+
+                />
+
               <label className="favorites__radio-label"
                 id={determineSelectedCircle('winter')}
                 htmlFor="winter-button">
@@ -53,6 +63,12 @@ const Favorites = () => {
                 }}
               />
 
+              <img className="custom-radio"
+                src="./assets/img/icons/checked.svg"
+                alt="" 
+                id={season === 'spring'? customRadioId: undefined}
+                />
+
               <label className="favorites__radio-label"
                 id={determineSelectedCircle('spring')}
                 htmlFor="spring-button">
@@ -69,7 +85,11 @@ const Favorites = () => {
                   setSeason('summer');
                 }}
                 />
-
+              <img className="custom-radio"
+                src="./assets/img/icons/checked.svg"
+                alt=""
+                id={season === 'summer'? customRadioId: undefined}
+                />
               <label className="favorites__radio-label"
                 id={determineSelectedCircle('summer')}
                 htmlFor="summer-button">
@@ -86,6 +106,12 @@ const Favorites = () => {
                   setSeason('autumn');
                 }}
                 />
+
+              <img className="custom-radio"
+                src="./assets/img/icons/checked.svg"
+                alt=""
+                id={season === 'autumn'? customRadioId: undefined}
+                 />
               <label className="favorites__radio-label"
                 id={determineSelectedCircle('autumn')}
                 htmlFor="autumn-button">
