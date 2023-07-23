@@ -43,11 +43,20 @@ h1{
   text-decoration: none;
 }
 
+.header__burger-and-profile{
+  position: relative;
+  top: 0.7rem;
+}
+
 .profile-icon{
   cursor: pointer;
 }
 
-@media (max-width: 1440px){
+.burger-menu{
+  display: none;
+}
+
+@media (max-width: 1410px){
   .header__aligner{
     gap: 9.5rem;
   }
@@ -85,5 +94,30 @@ h1{
 
   .header__aligner {
     gap: 0.65rem;
+  }
+}
+
+@media (max-width: 768px){
+
+  .header__aligner {
+    gap: 20rem;
+  }
+
+  .navigation-panel{
+    display: none;
+  }
+
+  .header__burger-and-profile{
+    display: flex;
+    gap: 2.5rem;
+    top: 0rem;
+  }
+
+  .burger-menu{
+    display: block;
+  }
+
+  .profile-icon{
+    position: relative;
   }
 }

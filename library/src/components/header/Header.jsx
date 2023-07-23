@@ -24,7 +24,10 @@ const Header = () => {
               </li>
           </ul>
         </nav>
-        <img className="profile-icon" src="./assets/img/icons/icon_profile.svg" alt="Profile icon" />
+        <div className="header__burger-and-profile">
+          <img className="profile-icon" src="./assets/img/icons/icon_profile.svg" alt="Profile icon" />
+          <img className="burger-menu" src="./assets/img/icons/burger.svg" alt="burger menu" />
+        </div>
       </div>
     </header>
   )
