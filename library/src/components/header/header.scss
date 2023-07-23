@@ -66,3 +66,24 @@ h1{
     gap: 3.5rem;
   }
 }
+
+@media (max-width: 1026px){
+  .header__aligner {
+    gap: 1.5rem;
+  }
+
+  .navigation-panel__elements-wrapper {
+    display: flex;
+    gap: 0.875rem;
+  }
+}
+
+@media (max-width: 892px){
+  .navigation-panel__links{
+    font-size: 1rem;
+  }
+
+  .header__aligner {
+    gap: 0.65rem;
+  }
+}

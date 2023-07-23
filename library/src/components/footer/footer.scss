@@ -98,3 +98,13 @@ footer{
     gap: 17rem;
   }
 }
+
+@media (max-width: 1084px){
+  .footer__top-side{
+    gap: 14rem;
+  }
+
+  .footer__downside{
+    gap: 6rem;
+  }
+}

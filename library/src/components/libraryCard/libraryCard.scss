@@ -174,7 +174,31 @@
 
 @media (max-width: 1378px){
   .library-card__aligner{
-    gap: 0rem;
+    gap: 1.31rem;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
+}
+
+@media (max-width: 1116px){
+
+  .get-card{
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .library-card__aligner{
+    justify-content: center;
+  }
+
+  .get-card__call-to-action{
+    text-align: center;
+  }
+
+  .get-card__description{
+    text-align: center;
+  }
+
 }
