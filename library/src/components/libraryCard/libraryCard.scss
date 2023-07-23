@@ -202,3 +202,27 @@
   }
 
 }
+
+@media (max-width: 768px){
+  .menu {
+    width: 97.5%;
+    max-width: 97.5%;
+  }
+
+  .form-border {
+    left: 0rem;
+  }
+
+  .get-card {
+    right: 0rem;
+    width: 70%;
+  }
+
+  .library-form__button{
+    margin-top: 1rem;
+  }
+
+  .get-card__buttons {
+    margin-top: 2.7rem;
+  }
+}

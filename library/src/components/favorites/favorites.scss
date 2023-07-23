@@ -44,6 +44,12 @@
   border-radius: 1px;
   position: relative;
   top: 0.1rem;
+  border: 2px solid #f00;
+
+  -webkit-appearance: none;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid black;
 }
 
 .favorites__radio:checked{
@@ -55,18 +61,6 @@
   top: 0.1rem;
   display: inline;
 }
-
-// .favorites__radio:after{
-//   width: 1.0625rem;
-//   height: 1.0625rem;
-//   position: relative;
-//   top: 4px;
-//   left: 3px;
-//   display: flex;
-//   justify-items: center;
-//   align-items: center;
-//   background-color: #0C0C0E;
-// }
 
 // .favorites__radio:checked:after{
 //   width: 11px;
@@ -246,5 +240,17 @@
 
   .favorites__seasons {
     right: 0.9rem;
+  }
+
+  .books{
+    gap: 2.42rem;
+  }
+
+  .books__book-block:nth-child(3){
+    top: -0.3rem;
+  }
+
+  .books__book-block:nth-child(4){
+    top: -0.3rem;
   }
 }

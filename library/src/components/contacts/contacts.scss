@@ -61,3 +61,19 @@
     gap: 6.25rem;
   }
 }
+
+@media (max-width: 768px){
+  .contacts__adress-and-map{
+    justify-content: flex-start;
+  }
+
+  .contacts__adress{
+    position: relative;
+    left: 1.25rem;
+  }
+
+  .contacts__map{
+    position: relative;
+    left: 2.22rem;
+  }
+}

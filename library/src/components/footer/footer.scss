@@ -108,3 +108,21 @@ footer{
     gap: 6rem;
   }
 }
+
+@media (max-width: 768px){
+  .footer__top-side {
+    gap: 18.8rem;
+  }
+
+  .footer__hr{
+    width: 95%;
+  }
+
+  .footer__downside {
+    gap: 8.1rem;
+  }
+
+  .footer__school{
+    left: 0rem;
+  }
+}
