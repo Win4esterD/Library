@@ -43,3 +43,9 @@
     right: 0rem;
   }
 }
+
+@media (max-width: 768px){
+  .greetings{
+    background-image: url('../../../public/assets/img/backgrounds/welcome-tablet.png');
+  }
+}
