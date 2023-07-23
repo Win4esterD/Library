@@ -46,3 +46,23 @@ h1{
 .profile-icon{
   cursor: pointer;
 }
+
+@media (max-width: 1440px){
+  .header__aligner{
+    gap: 9.5rem;
+  }
+
+  .navigation-panel{
+    left: 8rem;
+  }
+}
+
+@media (max-width: 1220px){
+  .navigation-panel{
+    left: 0rem;
+  }
+
+  .header__aligner{
+    gap: 3.5rem;
+  }
+}

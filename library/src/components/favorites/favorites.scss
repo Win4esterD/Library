@@ -191,3 +191,49 @@
 .custom-radio{
   display: none;
 }
+
+@media (max-width: 1410px){
+
+  .favorites__pick{
+    right: 30.7rem;
+  }
+
+  .favorites__seasons{
+    right: 16.3rem;
+  }
+
+  .books{
+    width: 74rem;
+    gap: 2rem;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 1244px){
+  .book__cover{
+    left: 22.4rem;
+  }
+
+  .favorites__seasons{
+    right: 10rem;
+  }
+
+  .favorites__pick{
+    right: 24.7rem;
+  }
+}
+
+@media (max-width: 1194px){
+
+  .favorites__pick {
+    right: 15.7rem;
+  }
+  
+  .favorites__seasons {
+    right: 0.8rem;
+  }
+
+  .books{
+    justify-content: center;
+  }
+}

@@ -159,3 +159,22 @@
   transition: 1.3s;
   background-color: #BB945F;
 }
+
+@media (max-width: 1410px){
+  .form-border{
+    position: relative;
+    left: 1.25rem;
+  }
+
+  .get-card{
+    position: relative;
+    right: 1.25rem;
+  }
+}
+
+@media (max-width: 1378px){
+  .library-card__aligner{
+    gap: 0rem;
+    justify-content: space-between;
+  }
+}

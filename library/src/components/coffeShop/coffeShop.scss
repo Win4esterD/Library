@@ -10,7 +10,6 @@
 
 .coffe-shop__description{
   @include sectionDescription();
-  // padding: 0 1rem;
   margin-top: 2.6rem;
   letter-spacing: 0.125rem;
   width: 85.1rem;
@@ -73,4 +72,28 @@
 
 .menu__plate-right{
   gap: 3.7rem;
+}
+
+@media (max-width: 1410px){
+  .menus{
+    gap: 30%;
+    right: 0rem;
+    left: -12rem;
+  }
+}
+
+@media (max-width: 1310px){
+  .menus{
+    gap: 13%;
+    left: -7rem;
+  }
+}
+
+@media(max-width: 1162px){
+  .menus{
+    gap: 10%;
+    left: -4rem;
+  }
+
+
 }

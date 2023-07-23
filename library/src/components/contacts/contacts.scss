@@ -4,6 +4,7 @@
   display: flex;
   gap: 12.5rem;
   margin-top: 2.5rem;
+  flex-wrap: wrap;
 }
 
 .contacts__header{
@@ -46,4 +47,17 @@
 
 .contacts__director{
   font-weight: 700;
+}
+
+@media (max-width: 1410px){
+  .contacts__adress-and-map{
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1216px){
+  .contacts__adress-and-map{
+    justify-content: center;
+    gap: 6.25rem;
+  }
 }

@@ -88,3 +88,13 @@ footer{
 .footer__github{
   letter-spacing: normal;
 }
+
+@media(max-width: 1410px){
+  .footer__top-side{
+    gap: 40rem;
+  }
+
+  .footer__downside{
+    gap: 17rem;
+  }
+}

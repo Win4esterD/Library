@@ -21,7 +21,6 @@
 
 .greetings__header{
   width: 23rem;
-  /* position: absolute; */
   top: 16rem;
   left: 7rem;
   color: #FFF;
@@ -33,4 +32,14 @@
   line-height: 3.125rem;
   letter-spacing: 0.1875rem;
   text-transform: uppercase;
+}
+
+@media (max-width: 1440px){
+  .greetings{
+    display: flex;
+  }
+
+  .greetings__background{
+    right: 0rem;
+  }
 }
