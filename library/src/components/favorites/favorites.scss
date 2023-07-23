@@ -210,9 +210,6 @@
 }
 
 @media (max-width: 1244px){
-  .book__cover{
-    left: 22.4rem;
-  }
 
   .favorites__seasons{
     right: 10rem;
@@ -223,17 +220,31 @@
   }
 }
 
-@media (max-width: 1194px){
+@media (max-width: 1210px){
+  .books {
+    gap: 3rem;
+  }
 
   .favorites__pick {
     right: 15.7rem;
   }
-  
+
   .favorites__seasons {
     right: 0.8rem;
   }
 
   .books{
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px){
+
+  .favorites__pick {
+    right: 15.45rem;
+  }
+
+  .favorites__seasons {
+    right: 0.9rem;
   }
 }

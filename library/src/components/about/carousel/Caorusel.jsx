@@ -15,6 +15,10 @@ const Carousel = () => {
           <img className="carousel__img" style={shift} src="./assets/img/caorusel/caorusel4.png" alt="slide 4" />
           <img className="carousel__img" style={shift} src="./assets/img/caorusel/caorusel5.png" alt="slide 5" />
         </div>
+        <div className="arrows-wrapper">
+          <img className="carousel__arrow" src="./assets/img/icons/arrow-left.svg" alt="arrow-left" />
+          <img className="carousel__arrow" src="./assets/img/icons/arrow-right.svg" alt="arrow-right" />
+        </div>
         <div className="togglers">
           <div className="togglers__external" onClick={
             () => {
@@ -31,7 +35,7 @@ const Carousel = () => {
           <div className="togglers__external" onClick={
             () => {
               setValue('second');
-              setShift({transform: 'translateX(-100%)'});
+              setShift({transform: 'translateX(-107%)'});
             }
             }
             >
@@ -42,7 +46,7 @@ const Carousel = () => {
           <div className="togglers__external" onClick={
             () => {
               setValue('third');
-              setShift({transform: 'translateX(-210%)'});
+              setShift({transform: 'translateX(-215%)'});
             }
             }
             >
