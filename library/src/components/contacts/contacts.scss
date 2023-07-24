@@ -76,4 +76,25 @@
     position: relative;
     left: 2.22rem;
   }
+
+}
+
+@media (max-width: 744px){
+  .contacts__img{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 414px){
+  .contacts__adress-header{
+    width: 18rem;
+  }
+
+  .contacts__adress{
+    width: 90%;
+  }
+
+  .contacts__map{
+    left: 1rem;
+  }
 }

@@ -226,3 +226,49 @@
     margin-top: 2.7rem;
   }
 }
+
+@media (max-width: 642px){
+  .form-block{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-border{
+    max-width: 97%;
+  }
+
+  .form-block__header{
+    max-width: 97%;
+  }
+
+  .library-form__inputs{
+    max-width: 97%;
+  }
+
+  .library-form__input{
+    max-width: 92%;
+  }
+  
+}
+
+@media (max-width: 397px){
+  .library-form__description{
+    font-size: 1.3rem;
+  }
+
+  .library-form__input{
+    height: 3.7rem;
+  }
+
+  .library-form__input::placeholder{
+    font-size: 1.3rem;
+  }
+
+  .library-form__button{
+    width: 12.2rem;
+    font-size: 1rem;
+  }
+}

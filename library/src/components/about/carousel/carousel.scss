@@ -87,3 +87,33 @@
   }
 
 }
+
+@media (max-width: 600px){
+  .arrows-wrapper{
+    gap: 29rem;
+  }
+}
+
+@media (max-width: 480px){
+  .carousel{
+    width: 20rem;
+    height: 30rem;
+  }
+
+  .arrows-wrapper {
+    gap: 0rem;
+    justify-content: space-between;
+    width: 92%;
+  }
+}
+
+@media (max-width: 367px){
+  .carousel{
+    width: 17rem;
+    height: 25rem;
+  }
+
+  .arrows-wrapper{
+    top: 27.9rem
+  }
+}

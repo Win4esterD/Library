@@ -121,3 +121,24 @@ h1{
     position: relative;
   }
 }
+
+@media (max-width: 744px){
+  .header__aligner {
+    gap: 0rem;
+    justify-content: space-between;
+    max-width: 93%;
+    padding-left: 2.5%;
+  }
+}
+
+@media (max-width: 460px){
+  h1{
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 341px){
+  .header__burger-and-profile{
+    gap: 0.5rem;
+  }
+}
