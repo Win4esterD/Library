@@ -22,26 +22,6 @@ h1{
   letter-spacing: 0.0375rem;
 }
 
-.navigation-panel{
-  position: relative;
-  left: 12.93rem;
-}
-
-.navigation-panel__elements-wrapper{
-  display: flex;
-  gap: 1.875rem;
-}
-
-
-.navigation-panel__links{
-  color: #FFF;
-  font-family: Inter;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 3.125rem;
-  text-decoration: none;
-}
 
 .header__burger-and-profile{
   position: relative;
@@ -80,17 +60,9 @@ h1{
   .header__aligner {
     gap: 1.5rem;
   }
-
-  .navigation-panel__elements-wrapper {
-    display: flex;
-    gap: 0.875rem;
-  }
 }
 
 @media (max-width: 892px){
-  .navigation-panel__links{
-    font-size: 1rem;
-  }
 
   .header__aligner {
     gap: 0.65rem;
@@ -111,14 +83,18 @@ h1{
     display: flex;
     gap: 2.5rem;
     top: 0rem;
+    z-index: 2;
+    top: 0rem;
   }
 
   .burger-menu{
     display: block;
+    z-index: 2;
   }
 
   .profile-icon{
     position: relative;
+    z-index: 2;
   }
 }
 

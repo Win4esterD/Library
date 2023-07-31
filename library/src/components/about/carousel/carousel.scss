@@ -36,6 +36,10 @@
   align-items: center;
 }
 
+.mobile-toggler{
+  display: none;
+}
+
 .togglers__external:hover{
   cursor: pointer;
 }
@@ -67,6 +71,10 @@
   .carousel__img{
     max-width: 100%;
     width: 100%;
+  }
+
+  .mobile-toggler{
+    display: flex;
   }
 
   .togglers{
