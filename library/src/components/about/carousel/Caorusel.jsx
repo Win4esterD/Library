@@ -40,6 +40,12 @@ const Carousel = () => {
     }
   }
 
+  window.onresize = () => {
+    if (window.innerWidth > 768) {
+      firstToggler.current.click();
+    }
+  };
+
   return (
     <>
       <div className="carousel">

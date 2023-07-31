@@ -3,9 +3,15 @@ import BurgerMenu from "./burgerMenu/burgerMenu";
 import "./header.scss";
 import NavigationPanel from "./navigationPanel/NavigationPanel";
 
-
 const Header = () => {
-  const [burger, setBurger] = useState({'display': 'none'});
+  const [burger, setBurger] = useState({ display: "none" });
+
+  window.onresize = () => {
+    if (window.innerWidth > 768) {
+      setBurger({ display: "none" });
+    }
+  };
+
   return (
     <header>
       <div className="aligner header__aligner">
@@ -13,8 +19,13 @@ const Header = () => {
         <nav className="navigation-panel">
           <NavigationPanel />
         </nav>
-        <div className="header__burger-and-profile"
-          style={burger['display'] === 'none'? {'transform': 'translate(0rem)'}: {'transform': 'translate(0.6rem, -0.6rem)'}}
+        <div
+          className="header__burger-and-profile"
+          style={
+            burger["display"] === "none"
+              ? { transform: "translate(0rem)" }
+              : { transform: "translate(0.6rem, -0.6rem)" }
+          }
         >
           <img
             className="profile-icon"
@@ -23,13 +34,17 @@ const Header = () => {
           />
           <img
             className="burger-menu"
-            src={burger['display'] === 'none'? "./assets/img/icons/burger.svg": "./assets/img/icons/burger-cross.svg"}
+            src={
+              burger["display"] === "none"
+                ? "./assets/img/icons/burger.svg"
+                : "./assets/img/icons/burger-cross.svg"
+            }
             alt="burger menu"
             onClick={() => {
-              if(burger['display'] === "none"){
-                setBurger({'display': 'block'});
-              }else{
-                setBurger({'display': 'none'});
+              if (burger["display"] === "none") {
+                setBurger({ display: "block" });
+              } else {
+                setBurger({ display: "none" });
               }
             }}
           />

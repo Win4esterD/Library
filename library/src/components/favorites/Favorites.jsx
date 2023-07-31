@@ -1,6 +1,6 @@
 import './favorites.scss';
 import booksCollections from './seasons.json';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 const Favorites = () => {
