@@ -4,13 +4,19 @@ import "./header.scss";
 import NavigationPanel from "./navigationPanel/NavigationPanel";
 
 const Header = () => {
-  const [burger, setBurger] = useState({ display: "none" });
+  const [burger, setBurger] = useState({ transform: "translateY(-200%)" });
 
   window.onresize = () => {
     if (window.innerWidth > 768) {
-      setBurger({ display: "none" });
+      setBurger({ transform: "translateY(-200%)" });
     }
   };
+
+  document.body.addEventListener("click", (event) => {
+    if (burger["transform"] === "translateY(0%)") {
+      setBurger({ transform: "translateY(-200%)" });
+    }
+  });
 
   return (
     <header>
@@ -22,7 +28,7 @@ const Header = () => {
         <div
           className="header__burger-and-profile"
           style={
-            burger["display"] === "none"
+            burger["transform"] === "translateY(-200%)"
               ? { transform: "translate(0rem)" }
               : { transform: "translate(0.6rem, -0.6rem)" }
           }
@@ -31,20 +37,22 @@ const Header = () => {
             className="profile-icon"
             src="./assets/img/icons/icon_profile.svg"
             alt="Profile icon"
+            onClick={(event) => event.stopPropagation()}
           />
           <img
             className="burger-menu"
             src={
-              burger["display"] === "none"
+              burger["transform"] === "translateY(-200%)"
                 ? "./assets/img/icons/burger.svg"
                 : "./assets/img/icons/burger-cross.svg"
             }
             alt="burger menu"
-            onClick={() => {
-              if (burger["display"] === "none") {
-                setBurger({ display: "block" });
+            onClick={(event) => {
+              event.stopPropagation();
+              if (burger["transform"] === "translateY(-200%)") {
+                setBurger({ transform: "translateY(0%)" });
               } else {
-                setBurger({ display: "none" });
+                setBurger({ transform: "translateY(-200%)" });
               }
             }}
           />

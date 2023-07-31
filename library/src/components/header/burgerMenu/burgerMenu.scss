@@ -12,5 +12,7 @@
     right: 0rem;
     top: 0rem;
     z-index: 1;
+    transition: ease-in-out 1s;
+    transform: translateY(-200%);
   }
 }
