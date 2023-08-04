@@ -58,7 +58,7 @@ const Header = () => {
           />
         </div>
       </div>
-      <BurgerMenu burger={burger} />
+      <BurgerMenu burger={burger} setBurger={setBurger} />
     </header>
   );
 };

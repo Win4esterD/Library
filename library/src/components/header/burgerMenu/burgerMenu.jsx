@@ -2,7 +2,7 @@ import NavigationPanel from "../navigationPanel/NavigationPanel";
 import "./burgerMenu.scss";
 import { useRef, useEffect } from "react";
 
-const BurgerMenu = ({ burger }) => {
+const BurgerMenu = ({ burger, setBurger }) => {
   const burgerBackground = useRef(7);
 
   return (
@@ -12,7 +12,7 @@ const BurgerMenu = ({ burger }) => {
       onClick={(event) => event.stopPropagation()}
       ref={burgerBackground}
     >
-      <NavigationPanel />
+      <NavigationPanel setBurger={setBurger} />
     </div>
   );
 };

@@ -98,3 +98,9 @@
     left: 1rem;
   }
 }
+
+@media (max-width: 290px){
+  .contacts__adress-header{
+    max-width: 100%;
+  }
+}
