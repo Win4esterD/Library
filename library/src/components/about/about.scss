@@ -15,3 +15,25 @@
 .about__header{
   margin-top: 1.25rem;
 }
+
+@media (max-width: 768px){
+
+  .about{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about__description{
+    width: 90%;
+    position: relative;
+    left: 2.4rem;
+  }
+}
+
+@media (max-width: 358px){
+  .about__description{
+    left: 0rem;
+    text-align: center;
+  }
+}

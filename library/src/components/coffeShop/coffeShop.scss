@@ -10,11 +10,10 @@
 
 .coffe-shop__description{
   @include sectionDescription();
-  // padding: 0 1rem;
   margin-top: 2.6rem;
   letter-spacing: 0.125rem;
   width: 85.1rem;
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .menus{
@@ -73,4 +72,67 @@
 
 .menu__plate-right{
   gap: 3.7rem;
+}
+
+@media (max-width: 1410px){
+  .menus{
+    gap: 30%;
+    right: 0rem;
+    left: -12rem;
+  }
+}
+
+@media (max-width: 1310px){
+  .menus{
+    gap: 13%;
+    left: -7rem;
+  }
+}
+
+@media(max-width: 1162px){
+  .menus{
+    gap: 10%;
+    left: -4rem;
+  }
+}
+
+@media(max-width: 1100px){
+  .menus{
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    left: 0rem;
+  }
+}
+
+@media(max-width: 992px){
+  .menu{
+    width: 95%;
+  }
+
+  .menu:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .coffe-shop__header {
+    margin-top: 3.6rem;
+  }
+}
+
+@media (max-width: 484px){
+  .menus{
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 425px){
+  .menu__plate{
+    gap: 0.5rem;
+  }
+
+  .menu{
+    width: 100%;
+    max-width: 100%;
+  }
 }

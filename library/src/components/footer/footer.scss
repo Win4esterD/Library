@@ -88,3 +88,87 @@ footer{
 .footer__github{
   letter-spacing: normal;
 }
+
+@media(max-width: 1410px){
+  .footer__top-side{
+    gap: 40rem;
+  }
+
+  .footer__downside{
+    gap: 17rem;
+  }
+}
+
+@media (max-width: 1084px){
+  .footer__top-side{
+    gap: 14rem;
+  }
+
+  .footer__downside{
+    gap: 6rem;
+  }
+}
+
+@media (max-width: 768px){
+  .footer__top-side {
+    gap: 18.8rem;
+  }
+
+  .footer__hr{
+    width: 95%;
+  }
+
+  .footer__downside {
+    gap: 8.1rem;
+  }
+
+  .footer__school{
+    left: 0rem;
+  }
+}
+
+@media (max-width: 744px){
+  .footer__top-side {
+    gap: 0rem;
+    justify-content: space-between;
+    max-width: 95%;
+    width: 95%;
+  }
+
+  .footer__timetable{
+    width: 9.4rem;
+  }
+
+  .footer__downside{
+    gap: 0rem;
+    justify-content: space-between;
+    width: 95%;
+    padding-left: 2.5%;
+  }
+
+  .contacts__map{
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 425px){
+  .footer_adress{
+    font-size: 0.8rem;
+  }
+
+  .footer__timetable{
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer__school{
+    width: 10rem;
+  }
+}
+
+@media (max-width: 339px){
+  .footer__downside{
+    top: 0rem;
+  }
+}

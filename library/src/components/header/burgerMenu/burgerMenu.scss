@@ -1,0 +1,18 @@
+.burger-background{
+  display: none;
+}
+
+@media(max-width: 768px){
+  .burger-background{
+    display: flex;
+    width: 20.75rem;
+    height: 35.625rem;
+    background-color: #000;
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    z-index: 1;
+    transition: ease-in-out 0.8s;
+    transform: translateY(-200%);
+  }
+}

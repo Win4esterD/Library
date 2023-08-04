@@ -1,0 +1,127 @@
+.carousel{
+  height: 35rem;
+  width: 87.4rem;
+  max-width: 100%;
+  display: flex;
+  overflow-y: hidden;
+  gap: 1.56rem;
+  justify-content: space-between;
+  overflow-x: hidden;
+  margin: 1.25rem auto 0 auto;
+  position: relative;
+}
+
+.carousel__img{
+  transition: 1s;
+  max-width: 33.33%;
+}
+
+.togglers{
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.arrows-wrapper{
+  display: none;
+}
+
+.togglers__external{
+  width: 1.625rem;
+  height: 1.625rem;
+  position: relative;
+  bottom: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-toggler{
+  display: none;
+}
+
+.togglers__external:hover{
+  cursor: pointer;
+}
+
+.togglers__toggler{
+  width: 1rem;
+  height: 1rem;
+  background: #0C0C0E;
+  border-radius: 1rem;
+}
+
+#toggler_active{
+  background-color: #BB945F;
+}
+
+@media(max-width: 1410px){
+  .carousel{
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px){
+  .carousel{
+    max-width: 95%;
+    width: 28.125rem;
+    gap: 2rem;
+  }
+
+  .carousel__img{
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mobile-toggler{
+    display: flex;
+  }
+
+  .togglers{
+    margin-top: 1.5rem;
+  }
+
+  .arrows-wrapper{
+    display: flex;
+    position: absolute;
+    top: 31.9rem;
+    align-self: center;
+    gap: 34rem;
+    max-width: 95%;
+  }
+
+  .carousel__arrow:hover{
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 600px){
+  .arrows-wrapper{
+    gap: 29rem;
+  }
+}
+
+@media (max-width: 480px){
+  .carousel{
+    width: 20rem;
+    height: 30rem;
+  }
+
+  .arrows-wrapper {
+    gap: 0rem;
+    justify-content: space-between;
+    width: 92%;
+  }
+}
+
+@media (max-width: 367px){
+  .carousel{
+    width: 17rem;
+    height: 25rem;
+  }
+
+  .arrows-wrapper{
+    top: 27.9rem
+  }
+}
