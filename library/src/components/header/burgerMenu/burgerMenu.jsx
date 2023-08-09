@@ -1,6 +1,6 @@
 import NavigationPanel from "../navigationPanel/NavigationPanel";
 import "./burgerMenu.scss";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 const BurgerMenu = ({ burger, setBurger }) => {
   const burgerBackground = useRef(7);

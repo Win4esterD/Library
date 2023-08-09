@@ -73,6 +73,7 @@ h1{
 
   .header__aligner {
     gap: 20rem;
+    justify-content: center;
   }
 
   .navigation-panel{
@@ -84,17 +85,19 @@ h1{
     gap: 2.5rem;
     top: 0rem;
     z-index: 2;
-    top: 0rem;
+    width: 6.8rem;
   }
 
   .burger-menu{
-    display: block;
+    display: flex;
     z-index: 2;
+    width: 2.8125rem;
   }
 
   .profile-icon{
     position: relative;
     z-index: 2;
+    width: 1.75rem;
   }
 }
 

@@ -27,11 +27,6 @@ const Header = () => {
         </nav>
         <div
           className="header__burger-and-profile"
-          style={
-            burger["transform"] === "translateY(-200%)"
-              ? { transform: "translate(0rem)" }
-              : { transform: "translate(0.6rem, -0.6rem)" }
-          }
         >
           <img
             className="profile-icon"

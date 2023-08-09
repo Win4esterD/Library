@@ -86,7 +86,7 @@
     position: absolute;
     top: 31.9rem;
     align-self: center;
-    gap: 34rem;
+    gap: 35.4rem;
     max-width: 95%;
   }
 
@@ -96,13 +96,13 @@
 
 }
 
-@media (max-width: 600px){
+@media (max-width: 640px){
   .arrows-wrapper{
     gap: 29rem;
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 515px){
   .carousel{
     width: 20rem;
     height: 30rem;
