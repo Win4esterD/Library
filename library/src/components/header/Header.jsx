@@ -7,7 +7,7 @@ const Header = () => {
   const [burger, setBurger] = useState({ transform: "translateY(-200%)" });
 
   window.onresize = () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1026) {
       setBurger({ transform: "translateY(-200%)" });
     }
   };

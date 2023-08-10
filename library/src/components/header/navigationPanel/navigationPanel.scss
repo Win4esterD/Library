@@ -25,15 +25,7 @@
     display: flex;
     gap: 0.875rem;
   }
-}
 
-@media (max-width: 892px){
-  .navigation-panel__links{
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px){
   .navigation-panel__elements-wrapper{
     width: 100%;
     flex-direction: column;
