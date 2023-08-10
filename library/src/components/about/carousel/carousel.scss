@@ -115,6 +115,12 @@
   }
 }
 
+@media(max-width: 380px){
+  .arrows-wrapper{
+    width: 100%;
+  }
+}
+
 @media (max-width: 367px){
   .carousel{
     width: 17rem;

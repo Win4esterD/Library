@@ -16,6 +16,13 @@
   margin-top: 1.25rem;
 }
 
+@media(max-width: 950px){
+  .about__description{
+    max-width: 95%;
+    padding-left: 2.5%;
+  }
+}
+
 @media (max-width: 768px){
 
   .about{
@@ -28,6 +35,7 @@
     width: 90%;
     position: relative;
     left: 2.4rem;
+    padding-left: 0;
   }
 }
 
