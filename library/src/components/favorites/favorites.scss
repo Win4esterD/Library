@@ -5,7 +5,6 @@
 }
 
 .favorites__separation-line{
-  // margin-top: 1.25rem;
   margin-top: 1.27rem;
 }
 
@@ -80,6 +79,7 @@
   gap: 2rem;
   justify-content: space-between;
   left: -1.2rem;
+  transition: opacity .5s ease-in-out;
 }
 
 
@@ -204,6 +204,15 @@
 @media (max-width: 1210px){
   .books {
     gap: 3rem;
+  }
+
+  .seasons-aligner{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
   }
 
   .favorites__pick {

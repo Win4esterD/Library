@@ -21,8 +21,6 @@ const Carousel = () => {
       forthToggler.current.click();
     } else if (value === "forth") {
       fifthToggler.current.click();
-    } else {
-      firstToggler.current.click();
     }
   }
 
@@ -35,8 +33,6 @@ const Carousel = () => {
       secondToggler.current.click();
     } else if (value === "second") {
       firstToggler.current.click();
-    } else {
-      fifthToggler.current.click();
     }
   }
 
