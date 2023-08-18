@@ -225,9 +225,9 @@ const Favorites = () => {
               <button
                 disabled
                 className="button book__button"
-                id="book__button_active"
+                // id="book__button_active"
               >
-                Own
+                Buy
               </button>
               <img
                 className="book__cover"

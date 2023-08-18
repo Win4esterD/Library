@@ -8,14 +8,15 @@ import CoffeShop from './components/coffeShop/CoffeShop';
 import Contacts from './components/contacts/Contacts';
 import LibraryCard from './components/libraryCard/LibraryCard';
 import Footer from './components/footer/Footer';
+import RegMenu from './components/regMenu/RegMenu';
 
 
 function App() {
-  console.log('50 points');
   return (
     <>
       <Header />
       <main>
+        <RegMenu />
         <Welcome />
         <About />
         <Favorites />

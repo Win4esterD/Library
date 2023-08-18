@@ -1,5 +1,5 @@
-@mixin forumHeaders(){
-  color: #0C0C0E;
+@mixin forumHeaders() {
+  color: #0c0c0e;
   text-align: center;
   font-family: Forum;
   font-size: 2.5rem;
@@ -10,8 +10,20 @@
   text-transform: capitalize;
 }
 
-@mixin sectionHeader(){
-  color: #0C0C0E;
+@mixin forumMiniHeader() {
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+}
+
+@mixin sectionHeader() {
+  color: #0c0c0e;
   text-align: center;
   font-family: Forum;
   font-size: 2.5rem;
@@ -22,7 +34,7 @@
   text-transform: capitalize;
 }
 
-@mixin sectionDescription(){
+@mixin sectionDescription() {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -31,12 +43,12 @@
   font-weight: 400;
   line-height: 2.5rem;
 
-  @media (max-width: 494px){
+  @media (max-width: 494px) {
     font-size: 1rem;
   }
 }
 
-@mixin bookFont($fontWeight){
+@mixin bookFont($fontWeight) {
   color: #000;
   font-family: Inter;
   font-size: 0.9375rem;
@@ -46,7 +58,7 @@
   letter-spacing: 0.125rem;
 }
 
-@mixin button(){
+@mixin button() {
   text-align: center;
   font-family: Inter;
   font-size: 0.625rem;
@@ -58,7 +70,7 @@
   border: 1px solid;
 }
 
-@mixin contactHeader(){
+@mixin contactHeader() {
   color: #000;
   text-align: center;
   font-family: Inter;
@@ -70,7 +82,7 @@
   text-transform: capitalize;
 }
 
-@mixin formFont(){
+@mixin formFont() {
   font-family: Forum;
   font-size: 1.875rem;
   font-style: normal;

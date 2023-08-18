@@ -25,6 +25,7 @@ h1 {
 .header__burger-and-profile {
   position: relative;
   top: 0.7rem;
+  height: 3rem;
 }
 
 .profile-icon {
@@ -34,6 +35,15 @@ h1 {
 .burger-menu {
   display: none;
 }
+
+.profile-img-wrapper{
+  width: 1.75rem;
+  height: 1.75rem;
+  // background-color: #FFF;
+  border-radius: 1rem;
+}
+
+
 
 @media (max-width: 1410px) {
   .header__aligner {
@@ -83,6 +93,10 @@ h1 {
     display: flex;
     z-index: 2;
     width: 2.8125rem;
+  }
+  .profile-icon{
+    position: relative;
+    top: 0.7rem;
   }
 
   

@@ -10,7 +10,6 @@ Tablet - 768.png
 burger-open.png
 page-768open-burger.png
 
-
 # testing
 /coverage
 
@@ -27,3 +26,8 @@ page-768open-burger.png
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# files
+
+regDropMenu.png
+modal_Register.png
