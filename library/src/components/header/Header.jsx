@@ -3,8 +3,7 @@ import BurgerMenu from "./burgerMenu/burgerMenu";
 import "./header.scss";
 import NavigationPanel from "./navigationPanel/NavigationPanel";
 import SingUpMenu from "./signUpMenu/singUpMenu";
-import {regMenuContext} from '../../context/regMenuContext';
-
+import { regMenuContext } from "../../context/regMenuContext";
 
 const Header = () => {
   const [burger, setBurger] = useState({ transform: "translateY(-200%)" });
@@ -36,7 +35,14 @@ const Header = () => {
               className="profile-icon"
               src="./assets/img/icons/icon_profile.svg"
               alt="Profile icon"
+              style={{ display: isAuth === false ? "block" : "none" }}
             />
+            <div
+              className="profile-icon_authorised"
+              style={{ display: isAuth === true ? "block" : "none" }}
+            >
+              <p className="profile-icon_authorised__initials">JD</p>
+            </div>
           </div>
           <SingUpMenu
             profileIcon={profileIcon}

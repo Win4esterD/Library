@@ -16,7 +16,7 @@ import {useState} from 'react';
 function App() {
   const [regMenu, setRegMenu] = useState('none');
   const [SignUpWindow, setSignUpWindow] = useState('');
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   return (
     <>
       <regMenuContext.Provider

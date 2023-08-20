@@ -124,7 +124,7 @@ const RegMenu = () => {
           </label>
           <input
             className="reg-window__input-field"
-            type="text"
+            type="email"
             name="name"
             required
           ></input>

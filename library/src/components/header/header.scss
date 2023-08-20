@@ -32,6 +32,29 @@ h1 {
   cursor: pointer;
 }
 
+.profile-icon_authorised{
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 1.75rem;
+  background: #FFF;
+  cursor: pointer;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  position: relative;
+}
+
+.profile-icon_authorised__initials{
+  @include bookFont(400);
+  line-height: 1.25rem;
+  color: #BB945F;
+  letter-spacing: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .burger-menu {
   display: none;
 }

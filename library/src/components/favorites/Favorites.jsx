@@ -1,6 +1,7 @@
 import './favorites.scss';
 import booksCollections from './seasons.json';
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
+import {regMenuContext} from '../../context/regMenuContext';
 
 
 const Favorites = () => {
