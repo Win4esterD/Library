@@ -4,7 +4,14 @@ import { regMenuContext } from "../../../context/regMenuContext";
 
 const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
   const [menuHeight, setMenuHeight] = useState("0px");
-  const { setRegMenu, setSignUpWindow } = useContext(regMenuContext);
+  const {
+    setRegMenu,
+    setSignUpWindow,
+    isAuth,
+    setIsAuth,
+    setAuthorisedUser,
+    authorisedUser,
+  } = useContext(regMenuContext);
 
   useEffect(() => {
     const handleClick = (event) => {
@@ -29,6 +36,16 @@ const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
     };
   }, [menuHeight, profileIcon, burger, setBurger]);
 
+  const logOut = () => {
+    const userEmail = authorisedUser.email;
+    const userData = JSON.parse(localStorage.getItem(userEmail));
+    userData["authorised"] = false;
+    localStorage.setItem(userEmail, JSON.stringify(userData));
+
+    setIsAuth(false);
+    setAuthorisedUser("");
+  };
+
   return (
     <div
       className="sign-up-menu"
@@ -45,17 +62,21 @@ const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
           setSignUpWindow(e.target.innerHTML);
         }}
       >
-        Log In
+        {!isAuth ? "Log In" : "My profile"}
       </p>
       <p
         className="sign-up-menu__option"
         onClick={(e) => {
-          setMenuHeight("0px");
-          setRegMenu("flex");
-          setSignUpWindow(e.target.innerHTML);
+          if (e.target.innerHTML === "Register") {
+            setMenuHeight("0px");
+            setRegMenu("flex");
+            setSignUpWindow(e.target.innerHTML);
+          } else {
+            logOut()
+          }
         }}
       >
-        Register
+        {!isAuth ? "Register" : "Log Out"}
       </p>
     </div>
   );

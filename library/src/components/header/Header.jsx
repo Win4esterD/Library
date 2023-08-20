@@ -8,7 +8,7 @@ import { regMenuContext } from "../../context/regMenuContext";
 const Header = () => {
   const [burger, setBurger] = useState({ transform: "translateY(-200%)" });
   const profileIcon = useRef(7);
-  const { isAuth } = useContext(regMenuContext);
+  const { isAuth, authorisedUser } = useContext(regMenuContext);
 
   window.onresize = () => {
     if (window.innerWidth > 1026) {
@@ -21,6 +21,7 @@ const Header = () => {
       setBurger({ transform: "translateY(-200%)" });
     }
   });
+
 
   return (
     <header>
@@ -41,7 +42,9 @@ const Header = () => {
               className="profile-icon_authorised"
               style={{ display: isAuth === true ? "block" : "none" }}
             >
-              <p className="profile-icon_authorised__initials">JD</p>
+              <p className="profile-icon_authorised__initials" title={authorisedUser? authorisedUser.firstName + ' ' + authorisedUser.lastName: ''}>
+                {authorisedUser? authorisedUser.firstName[0] + authorisedUser.lastName[0]: ''}
+              </p>
             </div>
           </div>
           <SingUpMenu

@@ -4,40 +4,47 @@ import { regMenuContext } from "../../context/regMenuContext";
 import { useContext, useRef } from "react";
 
 const RegMenu = () => {
-  const { regMenu, setRegMenu, SignUpWindow, setSignUpWindow } =
-    useContext(regMenuContext);
+  const {
+    regMenu,
+    setRegMenu,
+    SignUpWindow,
+    setSignUpWindow,
+    authorisedUser,
+    setAuthorisedUser,
+    setIsAuth,
+  } = useContext(regMenuContext);
+
   const firstName = useRef(11);
   const lastName = useRef(12);
   const regEmail = useRef(13);
   const regPass = useRef(14);
 
+  function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function generateCardNumber() {
+    let number = "";
+    const cardNumberLength = 16;
+
+    for (let i = 0; i < cardNumberLength; i++) {
+      number += getRandomIntInclusive(0, 9).toString();
+    }
+
+    return number;
+  }
+
   //Register menu, where a user can register
   const registerMenu = () => {
-    function getRandomIntInclusive(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
-    }
-
-    function generateCardNumber() {
-      let number = "";
-      const cardNumberLength = 16;
-
-      for (let i = 0; i < cardNumberLength; i++) {
-        number += getRandomIntInclusive(0, 9).toString();
-      }
-
-      return number;
-    }
-
     return (
       <>
         <h3 className="reg-window__header">REGISTER</h3>
         <form
           className="reg-window__form"
-          action="#"
+          action=""
           onSubmit={(event) => {
-            event.preventDefault();
             setRegMenu("none");
             localStorage.setItem(
               regEmail.current.value,
@@ -110,6 +117,17 @@ const RegMenu = () => {
     );
   };
 
+  const logIn = () => {
+    
+    // const userEmail = authorisedUser.email;
+    // const userData = JSON.parse(localStorage.getItem(userEmail));
+    // userData["authorised"] = false;
+    // localStorage.setItem(userEmail, JSON.stringify(userData));
+
+    // setIsAuth(false);
+    // setAuthorisedUser("");
+  };
+
   const logInMenu = () => {
     return (
       <>
@@ -117,7 +135,7 @@ const RegMenu = () => {
         <form
           className="reg-window__form"
           action="#"
-          onSubmit={(event) => event.preventDefault()}
+          // onSubmit={(event) => event.preventDefault()}
         >
           <label className="reg-window__field-name" htmlFor="name">
             E-mail or readers card
@@ -144,7 +162,9 @@ const RegMenu = () => {
           <p className="reg-window__question">Don’t have an account?</p>
           <p
             className="reg-window__action"
-            onClick={(e) => setSignUpWindow(e.target.innerHTML)}
+            onClick={(e) => {
+              setSignUpWindow(e.target.innerHTML);
+            }}
           >
             Register
           </p>
@@ -152,6 +172,8 @@ const RegMenu = () => {
       </>
     );
   };
+
+
 
   const menus = {
     "Log In": logInMenu(),

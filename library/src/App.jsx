@@ -10,13 +10,31 @@ import LibraryCard from './components/libraryCard/LibraryCard';
 import Footer from './components/footer/Footer';
 import RegMenu from './components/regMenu/RegMenu';
 import { regMenuContext } from './context/regMenuContext';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 
 function App() {
   const [regMenu, setRegMenu] = useState('none');
   const [SignUpWindow, setSignUpWindow] = useState('');
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
+  const [authorisedUser, setAuthorisedUser] = useState('');
+
+  function determineAuthorisedUser(){
+    for (let key in localStorage) {
+      if (
+        localStorage.getItem(key) &&
+        JSON.parse(localStorage.getItem(key))["authorised"] === true
+      ) {
+        setAuthorisedUser(JSON.parse(localStorage.getItem(key)));
+        setIsAuth(true);
+        break;
+      }
+    }
+  }
+
+  useEffect(determineAuthorisedUser, []);
+
+
   return (
     <>
       <regMenuContext.Provider
@@ -27,6 +45,8 @@ function App() {
           setSignUpWindow,
           isAuth,
           setIsAuth,
+          authorisedUser,
+          setAuthorisedUser,
         }}
       >
         <Header />
