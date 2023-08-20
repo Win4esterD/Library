@@ -1,12 +1,15 @@
-import { useState, useRef} from "react";
+import { useState, useRef, useContext } from "react";
 import BurgerMenu from "./burgerMenu/burgerMenu";
 import "./header.scss";
 import NavigationPanel from "./navigationPanel/NavigationPanel";
 import SingUpMenu from "./signUpMenu/singUpMenu";
+import {regMenuContext} from '../../context/regMenuContext';
+
 
 const Header = () => {
   const [burger, setBurger] = useState({ transform: "translateY(-200%)" });
   const profileIcon = useRef(7);
+  const { isAuth } = useContext(regMenuContext);
 
   window.onresize = () => {
     if (window.innerWidth > 1026) {
@@ -25,7 +28,7 @@ const Header = () => {
       <div className="aligner header__aligner">
         <h1>Brooklyn Public Library</h1>
         <nav className="navigation-panel">
-          <NavigationPanel />
+          <NavigationPanel setBurger={setBurger} />
         </nav>
         <div className="header__burger-and-profile">
           <div className="profile-img-wrapper" ref={profileIcon}>
@@ -35,7 +38,11 @@ const Header = () => {
               alt="Profile icon"
             />
           </div>
-          <SingUpMenu profileIcon={profileIcon} setBurger={setBurger} burger={burger}/>
+          <SingUpMenu
+            profileIcon={profileIcon}
+            setBurger={setBurger}
+            burger={burger}
+          />
           <img
             className="burger-menu"
             src={

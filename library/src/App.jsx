@@ -9,22 +9,38 @@ import Contacts from './components/contacts/Contacts';
 import LibraryCard from './components/libraryCard/LibraryCard';
 import Footer from './components/footer/Footer';
 import RegMenu from './components/regMenu/RegMenu';
+import { regMenuContext } from './context/regMenuContext';
+import {useState} from 'react';
 
 
 function App() {
+  const [regMenu, setRegMenu] = useState('none');
+  const [SignUpWindow, setSignUpWindow] = useState('');
+  const [isAuth, setIsAuth] = useState(false);
   return (
     <>
-      <Header />
-      <main>
-        <RegMenu />
-        <Welcome />
-        <About />
-        <Favorites />
-        <CoffeShop />
-        <Contacts />
-        <LibraryCard />
-      </main>
-      <Footer />
+      <regMenuContext.Provider
+        value={{
+          regMenu,
+          setRegMenu,
+          SignUpWindow,
+          setSignUpWindow,
+          isAuth,
+          setIsAuth,
+        }}
+      >
+        <Header />
+        <main>
+          <RegMenu />
+          <Welcome />
+          <About />
+          <Favorites />
+          <CoffeShop />
+          <Contacts />
+          <LibraryCard />
+        </main>
+        <Footer />
+      </regMenuContext.Provider>
     </>
   );
 }

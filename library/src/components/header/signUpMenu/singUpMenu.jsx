@@ -1,8 +1,10 @@
 import "./signUpMenu.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { regMenuContext } from "../../../context/regMenuContext";
 
 const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
   const [menuHeight, setMenuHeight] = useState("0px");
+  const { setRegMenu, setSignUpWindow } = useContext(regMenuContext);
 
   useEffect(() => {
     const handleClick = (event) => {
@@ -28,11 +30,33 @@ const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
   }, [menuHeight, profileIcon, burger, setBurger]);
 
   return (
-    <div className="sign-up-menu" style={{ height: menuHeight }} onClick={(e) => e.stopPropagation()}>
+    <div
+      className="sign-up-menu"
+      style={{ height: menuHeight }}
+      onClick={(e) => e.stopPropagation()}
+    >
       <p className="sign-up-menu__profile">Profile</p>
       <hr className="sign-up-menu__separation-line" />
-      <p className="sign-up-menu__option" onClick={() => setMenuHeight("0px")}>Log In</p>
-      <p className="sign-up-menu__option" onClick={() => setMenuHeight("0px")}>Register</p>
+      <p
+        className="sign-up-menu__option"
+        onClick={(e) => {
+          setMenuHeight("0px");
+          setRegMenu("flex");
+          setSignUpWindow(e.target.innerHTML);
+        }}
+      >
+        Log In
+      </p>
+      <p
+        className="sign-up-menu__option"
+        onClick={(e) => {
+          setMenuHeight("0px");
+          setRegMenu("flex");
+          setSignUpWindow(e.target.innerHTML);
+        }}
+      >
+        Register
+      </p>
     </div>
   );
 };
