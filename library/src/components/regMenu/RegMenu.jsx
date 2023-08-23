@@ -2,6 +2,7 @@ import React from "react";
 import "./regMenu.scss";
 import { regMenuContext } from "../../context/regMenuContext";
 import { useContext, useRef } from "react";
+import UserProfile from "./userProfile/userProfile";
 
 const RegMenu = () => {
   const {
@@ -9,9 +10,9 @@ const RegMenu = () => {
     setRegMenu,
     SignUpWindow,
     setSignUpWindow,
+    setIsAuth,
     authorisedUser,
     setAuthorisedUser,
-    setIsAuth,
   } = useContext(regMenuContext);
 
   const firstName = useRef(11);
@@ -27,10 +28,10 @@ const RegMenu = () => {
 
   function generateCardNumber() {
     let number = "";
-    const cardNumberLength = 16;
+    const cardNumberLength = 9;
 
     for (let i = 0; i < cardNumberLength; i++) {
-      number += getRandomIntInclusive(0, 9).toString();
+      number += getRandomIntInclusive(0, 15).toString("16");
     }
 
     return number;
@@ -118,14 +119,32 @@ const RegMenu = () => {
   };
 
   const logIn = () => {
-    
-    // const userEmail = authorisedUser.email;
-    // const userData = JSON.parse(localStorage.getItem(userEmail));
-    // userData["authorised"] = false;
-    // localStorage.setItem(userEmail, JSON.stringify(userData));
+    const email = regEmail.current.value;
+    const password = regPass.current.value;
+    const parsedJSON = JSON.parse(localStorage.getItem(email));
 
-    // setIsAuth(false);
-    // setAuthorisedUser("");
+    if (email in localStorage && parsedJSON.password === password) {
+      parsedJSON.authorised = true;
+      localStorage.setItem(email, JSON.stringify(parsedJSON));
+      setAuthorisedUser(parsedJSON);
+      setIsAuth(true);
+      setRegMenu("none");
+    } else if (!(email in localStorage)) {
+      for (let item in localStorage) {
+        if (
+          localStorage.getItem(item) !== null &&
+          JSON.parse(localStorage.getItem(item)).cardNumber === email &&
+          JSON.parse(localStorage.getItem(item)).password === password
+        ) {
+          const user = JSON.parse(localStorage.getItem(item));
+          user["authorised"] = true;
+          localStorage.setItem(user.email, JSON.stringify(user));
+          setAuthorisedUser(user);
+          setIsAuth(true);
+          setRegMenu("none");
+        }
+      }
+    }
   };
 
   const logInMenu = () => {
@@ -134,17 +153,20 @@ const RegMenu = () => {
         <h3 className="reg-window__header">Login</h3>
         <form
           className="reg-window__form"
-          action="#"
-          // onSubmit={(event) => event.preventDefault()}
+          onSubmit={(event) => {
+            event.preventDefault();
+            logIn();
+          }}
         >
           <label className="reg-window__field-name" htmlFor="name">
             E-mail or readers card
           </label>
           <input
             className="reg-window__input-field"
-            type="email"
+            type="text"
             name="name"
             required
+            ref={regEmail}
           ></input>
           <label className="reg-window__field-name" htmlFor="name">
             Password
@@ -155,6 +177,7 @@ const RegMenu = () => {
             name="last-name"
             minLength={8}
             required
+            ref={regPass}
           ></input>
           <button className="button reg-window__button">Log In</button>
         </form>
@@ -172,8 +195,6 @@ const RegMenu = () => {
       </>
     );
   };
-
-
 
   const menus = {
     "Log In": logInMenu(),
@@ -195,6 +216,11 @@ const RegMenu = () => {
         />
         {menus[SignUpWindow]}
       </div>
+      {SignUpWindow === "My profile" ? (
+        <UserProfile authorisedUser={authorisedUser} />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

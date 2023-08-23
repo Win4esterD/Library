@@ -9,8 +9,8 @@ const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
     setSignUpWindow,
     isAuth,
     setIsAuth,
-    setAuthorisedUser,
     authorisedUser,
+    setAuthorisedUser,
   } = useContext(regMenuContext);
 
   useEffect(() => {
@@ -52,7 +52,9 @@ const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
       style={{ height: menuHeight }}
       onClick={(e) => e.stopPropagation()}
     >
-      <p className="sign-up-menu__profile">Profile</p>
+      <p className="sign-up-menu__profile" >
+        {authorisedUser.cardNumber ? authorisedUser.cardNumber : "Profile"}
+      </p>
       <hr className="sign-up-menu__separation-line" />
       <p
         className="sign-up-menu__option"
@@ -72,7 +74,8 @@ const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
             setRegMenu("flex");
             setSignUpWindow(e.target.innerHTML);
           } else {
-            logOut()
+            logOut();
+            setMenuHeight("0px");
           }
         }}
       >
