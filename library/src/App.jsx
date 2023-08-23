@@ -15,9 +15,7 @@ import {useState, useEffect} from 'react';
 
 function App() {
   const [regMenu, setRegMenu] = useState('none');
-  // const [regMenu, setRegMenu] = useState('flex');
   const [SignUpWindow, setSignUpWindow] = useState('');
-  // const [SignUpWindow, setSignUpWindow] = useState('My profile');
   const [isAuth, setIsAuth] = useState(false);
   const [authorisedUser, setAuthorisedUser] = useState('');
 

@@ -31,7 +31,7 @@ const RegMenu = () => {
     const cardNumberLength = 9;
 
     for (let i = 0; i < cardNumberLength; i++) {
-      number += getRandomIntInclusive(0, 15).toString("16");
+      number += getRandomIntInclusive(0, 15).toString("16").toUpperCase();
     }
 
     return number;
@@ -56,6 +56,7 @@ const RegMenu = () => {
                 password: regPass.current.value,
                 cardNumber: generateCardNumber(),
                 authorised: true,
+                visits: 1,
               })
             );
           }}
@@ -217,7 +218,7 @@ const RegMenu = () => {
         {menus[SignUpWindow]}
       </div>
       {SignUpWindow === "My profile" ? (
-        <UserProfile authorisedUser={authorisedUser} />
+        <UserProfile authorisedUser={authorisedUser} setRegMenu={setRegMenu} />
       ) : (
         ""
       )}
