@@ -56,7 +56,7 @@ const RegMenu = () => {
                 password: regPass.current.value,
                 cardNumber: generateCardNumber(),
                 authorised: true,
-                visits: 1,
+                visits: 0,
               })
             );
           }}
@@ -126,6 +126,7 @@ const RegMenu = () => {
 
     if (email in localStorage && parsedJSON.password === password) {
       parsedJSON.authorised = true;
+      parsedJSON.visits += 1;
       localStorage.setItem(email, JSON.stringify(parsedJSON));
       setAuthorisedUser(parsedJSON);
       setIsAuth(true);
@@ -139,6 +140,7 @@ const RegMenu = () => {
         ) {
           const user = JSON.parse(localStorage.getItem(item));
           user["authorised"] = true;
+          user['visits'] += 1;
           localStorage.setItem(user.email, JSON.stringify(user));
           setAuthorisedUser(user);
           setIsAuth(true);

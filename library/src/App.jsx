@@ -23,10 +23,15 @@ function App() {
     for (let key in localStorage) {
       if (
         localStorage.getItem(key) &&
-        JSON.parse(localStorage.getItem(key))["authorised"] === true
+        JSON.parse(localStorage.getItem(key))["authorised"] === true &&
+        localStorage.getItem(key) !== undefined &&
+        localStorage.getItem(key) !== null
       ) {
-        setAuthorisedUser(JSON.parse(localStorage.getItem(key)));
+        const user = JSON.parse(localStorage.getItem(key));
+        user.visits += 1;
+        setAuthorisedUser(user);
         setIsAuth(true);
+        localStorage.setItem(key, JSON.stringify(user));
         break;
       }
     }
