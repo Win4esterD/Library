@@ -28,10 +28,10 @@ function App() {
         localStorage.getItem(key) !== null
       ) {
         const user = JSON.parse(localStorage.getItem(key));
-        user.visits += 1;
+        // user.visits += 1;
         setAuthorisedUser(user);
         setIsAuth(true);
-        localStorage.setItem(key, JSON.stringify(user));
+        // localStorage.setItem(key, JSON.stringify(user));
         break;
       }
     }

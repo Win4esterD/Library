@@ -1,7 +1,8 @@
-import React from "react";
+import {React, useRef} from "react";
 import "./userProfile.scss";
 
 const UserProfile = ({ authorisedUser, setRegMenu }) => {
+  const cardNumber = useRef("13");
   return (
     <div className="profile-window" onClick={(e) => e.stopPropagation()}>
       <div className="profile-window__avatar-area">
@@ -24,7 +25,7 @@ const UserProfile = ({ authorisedUser, setRegMenu }) => {
           className="profile-window__close"
           src="./assets/img/icons/close_btn.svg"
           alt="close"
-          onClick={() => setRegMenu('none')}
+          onClick={() => setRegMenu("none")}
         />
         <h3 className="profile-window__header">MY PROFILE</h3>
         <div className="profile-window__stats-wrapper">
@@ -48,7 +49,7 @@ const UserProfile = ({ authorisedUser, setRegMenu }) => {
               width="20px"
               height="21px"
             />
-            <p className="profile-window__counter">1240</p>
+            <p className="profile-window__counter">{authorisedUser.bonuses}</p>
           </div>
           <div className="profile-window__stats">
             <p className="profile-window__metrics">Books</p>
@@ -59,7 +60,9 @@ const UserProfile = ({ authorisedUser, setRegMenu }) => {
               width="20px"
               height="21px"
             />
-            <p className="profile-window__counter">2</p>
+            <p className="profile-window__counter">
+              {authorisedUser? authorisedUser.books.length: '0'}
+            </p>
           </div>
         </div>
         <p className="profile-window__rented-books-header">Rented books</p>
@@ -71,13 +74,19 @@ const UserProfile = ({ authorisedUser, setRegMenu }) => {
         </ul>
         <div className="profile-window__card-wrapper">
           <p className="profile-window__card-number">Card number</p>
-          <p className="profile-window__number">{authorisedUser.cardNumber}</p>
+          <p className="profile-window__number" ref={cardNumber}>
+            {authorisedUser.cardNumber}
+          </p>
           <img
             src="./assets/img/icons/icon-copy.svg"
             alt="copy"
             className="copy-icon profile-window__copy-icon"
             width="13.31px"
             height="12px"
+            onClick={() => {
+              navigator.clipboard.writeText(cardNumber.current.innerText);
+              alert("Card number copied");
+            }}
           />
         </div>
       </div>

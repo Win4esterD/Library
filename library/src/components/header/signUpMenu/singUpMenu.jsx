@@ -52,8 +52,11 @@ const SingUpMenu = ({ profileIcon, setBurger, burger }) => {
       style={{ height: menuHeight }}
       onClick={(e) => e.stopPropagation()}
     >
-      <p className="sign-up-menu__profile" >
-        {authorisedUser.cardNumber ? authorisedUser.cardNumber : "Profile"}
+      <p
+        className="sign-up-menu__profile"
+        style={{ fontSize: !isAuth ? "0.9375rem" : "0.75rem" }}
+      >
+        {authorisedUser.cardNumber && isAuth ? authorisedUser.cardNumber : "Profile"}
       </p>
       <hr className="sign-up-menu__separation-line" />
       <p

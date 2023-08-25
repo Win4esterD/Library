@@ -48,7 +48,7 @@
   background-color: #ffffff;
   margin-top: 0.94rem;
   width: 7.5rem;
-  height: 1.875rem;
+  // height: 1.875rem;
 }
 
 .profile-window__full-name {
@@ -62,11 +62,10 @@
   text-transform: capitalize;
   max-height: 30%;
   max-width: 100%;
-  padding-top: 0.33rem;
+  padding: 0.33rem 0 0.33rem 0;
 }
 
 .profile-window__info {
-  // width: 72%;
   width: 26.875rem;
 }
 

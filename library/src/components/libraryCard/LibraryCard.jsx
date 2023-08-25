@@ -1,9 +1,39 @@
 import "./libraryCard.scss";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { regMenuContext } from "../../context/regMenuContext";
 
 const LibraryCard = () => {
-  const { setSignUpWindow, setRegMenu } = useContext(regMenuContext);
+  const {
+    setSignUpWindow,
+    setRegMenu,
+    authorisedUser,
+    setAuthorisedUser,
+    isAuth,
+  } = useContext(regMenuContext);
+  const readerField = useRef(15);
+  const cardField = useRef(16);
+
+  const cardCheckHandler = () => {
+    const reader = readerField.current.value;
+    const card = cardField.current.value;
+    for (let key in localStorage) {
+      if (
+        localStorage.getItem(key) &&
+        localStorage.getItem(key) !== null &&
+        JSON.parse(localStorage.getItem(key))
+      ) {
+        const user = JSON.parse(localStorage.getItem(key));
+        if (user.firstName === reader && user.cardNumber === card) {
+          setAuthorisedUser(user);
+          setTimeout(() => {
+            readerField.current.value = '';
+            cardField.current.value = '';
+            setAuthorisedUser("");
+          }, 10000);
+        }
+      }
+    }
+  };
   return (
     <section className="library-card" id="library-card">
       <h2 className="section-header library-card__header">
@@ -16,9 +46,15 @@ const LibraryCard = () => {
       />
       <div className="aligner library-card__aligner">
         <div className="form-block">
-          <h3 className="form-block__header">Find your Library card</h3>
+          <h3 className="form-block__header">
+            {isAuth ? "Your Library card" : "Find your Library card"}
+          </h3>
           <div className="form-border">
-            <form action="#" className="library-form" onSubmit={(e) => e.preventDefault()}>
+            <form
+              action="#"
+              className="library-form"
+              onSubmit={(e) => e.preventDefault()}
+            >
               <div className="library-form__inputs">
                 <p className="library-form__description">
                   Brooklyn Public Library
@@ -26,27 +62,82 @@ const LibraryCard = () => {
                 <input
                   className="library-form__input"
                   type="text"
-                  placeholder="Reader's name "
+                  placeholder="Reader's name"
+                  ref={readerField}
                 />
                 <input
                   className="library-form__input"
                   type="text"
-                  pattern="\d{4,4}-\d{4,4}-\d{4,4}-\d{4,4}"
                   placeholder="Card number"
+                  ref={cardField}
                 />
               </div>
-              <button className="library-form__button">Check the card</button>
+              <button
+                className="library-form__button"
+                style={{ display: authorisedUser ? "none" : "inline" }}
+                onClick={cardCheckHandler}
+              >
+                Check the card
+              </button>
+              <div
+                className="library-form__user-metrics"
+                style={{ display: authorisedUser ? "flex" : "none" }}
+              >
+                <div className="library-form__metric-wrapper">
+                  <p className="library-form__metric-name">Visits</p>
+                  <img
+                    src="./assets/img/icons/visits.svg"
+                    alt="visits"
+                    width="20px"
+                    height="21px"
+                    className="library-form__metric-img"
+                  />
+                  <p className="library-form__metric">
+                    {authorisedUser ? authorisedUser.visits : ""}
+                  </p>
+                </div>
+                <div className="library-form__metric-wrapper">
+                  <p className="library-form__metric-name">Bonuses</p>
+                  <img
+                    src="./assets/img/icons/bonuses.svg"
+                    alt="bonuses"
+                    width="20px"
+                    height="21px"
+                    className="library-form__metric-img"
+                  />
+                  <p className="library-form__metric">
+                    {authorisedUser ? authorisedUser.bonuses : ""}
+                  </p>
+                </div>
+                <div className="library-form__metric-wrapper">
+                  <p className="library-form__metric-name">Books</p>
+                  <img
+                    src="./assets/img/icons/book.svg"
+                    alt="books"
+                    width="20px"
+                    height="21px"
+                    className="library-form__metric-img"
+                  />
+                  <p className="library-form__metric">
+                    {authorisedUser ? authorisedUser.books.length : ""}
+                  </p>
+                </div>
+              </div>
             </form>
           </div>
         </div>
         <div className="get-card">
-          <p className="get-card__call-to-action">Get a reader card</p>
+          <p className="get-card__call-to-action">
+            {!isAuth ? "Get a reader card" : "Visit your profile"}
+          </p>
           <p className="get-card__description">
-            You will be able to see a reader card after logging into account or
-            you can register a new account
+            {!isAuth
+              ? "You will be able to see a reader card after logging into account or you can register a new account"
+              : "With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more."}
           </p>
           <div className="get-card__buttons">
             <button
+              style={{ display: isAuth ? "none" : "block" }}
               className="get-card__button"
               onClick={() => {
                 setSignUpWindow("Register");
@@ -56,6 +147,7 @@ const LibraryCard = () => {
               Sign Up
             </button>
             <button
+              style={{ display: isAuth ? "none" : "block" }}
               className="get-card__button"
               onClick={() => {
                 setSignUpWindow("Log In");
@@ -63,6 +155,16 @@ const LibraryCard = () => {
               }}
             >
               Log in
+            </button>
+            <button
+              style={{ display: !isAuth ? "none" : "block" }}
+              className="get-card__button"
+              onClick={() => {
+                setSignUpWindow("My profile");
+                setRegMenu("flex");
+              }}
+            >
+              Profile
             </button>
           </div>
         </div>

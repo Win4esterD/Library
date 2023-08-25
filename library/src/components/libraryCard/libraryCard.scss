@@ -160,6 +160,33 @@
   background-color: #BB945F;
 }
 
+.library-form__user-metrics{
+  display: flex;
+  justify-content: center;
+  gap: 2.19rem;
+  margin-top: 0.94rem;
+}
+
+.library-form__metric-name{
+  @include profileMetrics();
+  font-size: 0.625rem;
+  letter-spacing: 0.0125rem;
+}
+
+.library-form__metric{
+  @include profileCounters();
+}
+
+.library-form__metric-img{
+  position: relative;
+  left: 0.4rem;
+}
+
+.library-form__metric{
+  position: relative;
+  right: 0.1rem;
+}
+
 @media (max-width: 1410px){
   .form-border{
     position: relative;

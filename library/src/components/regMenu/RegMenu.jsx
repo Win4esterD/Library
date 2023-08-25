@@ -57,6 +57,8 @@ const RegMenu = () => {
                 cardNumber: generateCardNumber(),
                 authorised: true,
                 visits: 0,
+                bonuses: 0,
+                books: [],
               })
             );
           }}
