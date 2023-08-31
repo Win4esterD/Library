@@ -3,6 +3,7 @@ import "./regMenu.scss";
 import { regMenuContext } from "../../context/regMenuContext";
 import { useContext, useRef } from "react";
 import UserProfile from "./userProfile/userProfile";
+import LibraryCardForm from "./libraryCardForm/LibraryCardForm";
 
 const RegMenu = () => {
   const {
@@ -41,6 +42,12 @@ const RegMenu = () => {
   const registerMenu = () => {
     return (
       <>
+        <img
+          className="reg-window__close"
+          src="./assets/img/icons/close_btn.svg"
+          alt="close button"
+          onClick={() => setRegMenu("none")}
+        />
         <h3 className="reg-window__header">REGISTER</h3>
         <form
           className="reg-window__form"
@@ -56,9 +63,10 @@ const RegMenu = () => {
                 password: regPass.current.value,
                 cardNumber: generateCardNumber(),
                 authorised: true,
-                visits: 0,
+                visits: 1,
                 bonuses: 0,
                 books: [],
+                libraryCard: false,
               })
             );
           }}
@@ -155,6 +163,12 @@ const RegMenu = () => {
   const logInMenu = () => {
     return (
       <>
+        <img
+          className="reg-window__close"
+          src="./assets/img/icons/close_btn.svg"
+          alt="close button"
+          onClick={() => setRegMenu("none")}
+        />
         <h3 className="reg-window__header">Login</h3>
         <form
           className="reg-window__form"
@@ -213,16 +227,21 @@ const RegMenu = () => {
       onClick={() => setRegMenu("none")}
     >
       <div className="reg-window" onClick={(e) => e.stopPropagation()}>
-        <img
+        {/* <img
           className="reg-window__close"
           src="./assets/img/icons/close_btn.svg"
           alt="close button"
           onClick={() => setRegMenu("none")}
-        />
+        /> */}
         {menus[SignUpWindow]}
       </div>
       {SignUpWindow === "My profile" ? (
         <UserProfile authorisedUser={authorisedUser} setRegMenu={setRegMenu} />
+      ) : (
+        ""
+      )}
+      {SignUpWindow === "Get card" ? (
+        <LibraryCardForm authorisedUser={authorisedUser} setRegMenu={setRegMenu} />
       ) : (
         ""
       )}

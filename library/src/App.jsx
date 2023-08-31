@@ -59,7 +59,7 @@ function App() {
           <RegMenu />
           <Welcome />
           <About />
-          <Favorites />
+          <Favorites/>
           <CoffeShop />
           <Contacts />
           <LibraryCard />

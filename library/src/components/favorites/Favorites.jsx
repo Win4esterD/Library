@@ -6,7 +6,7 @@ import { regMenuContext } from "../../context/regMenuContext";
 const Favorites = () => {
   const [season, setSeason] = useState("winter");
   const [seasonSelected, setSeasonSelected] = useState("winter");
-  const { setSignUpWindow, setRegMenu, isAuth } = useContext(regMenuContext);
+  const { setSignUpWindow, setRegMenu, isAuth, authorisedUser } = useContext(regMenuContext);
   const selecterCircleId = "favorites__radio-label_checked";
   const customRadioId = "custom-radio_active";
   const timeout = 300;
@@ -34,6 +34,9 @@ const Favorites = () => {
     if (!isAuth) {
       setRegMenu("flex");
       setSignUpWindow("Log In");
+    } else if (isAuth && authorisedUser.libraryCard === false) {
+      setRegMenu("flex");
+      setSignUpWindow("Get card");
     }
   }
 
