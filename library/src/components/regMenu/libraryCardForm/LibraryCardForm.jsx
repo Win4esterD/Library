@@ -1,7 +1,7 @@
 import React from "react";
 import "./libraryCardForm.scss";
 
-const LibraryCardForm = ({ setRegMenu }) => {
+const LibraryCardForm = ({ setRegMenu, authorisedUser }) => {
   return (
     <div className="library-card-window" onClick={(e) => e.stopPropagation()}>
       <header className="library-card-window__head">
@@ -17,7 +17,15 @@ const LibraryCardForm = ({ setRegMenu }) => {
         <form
           action="#"
           className="library-card-form"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={(e) => {
+            e.preventDefault();
+            authorisedUser.libraryCard = true;
+            localStorage.setItem(
+              authorisedUser.email,
+              JSON.stringify(authorisedUser)
+            );
+            setRegMenu("none");
+          }}
         >
           <label className="library-card-form__label" htmlFor="bank-card">
             Bank card number
@@ -26,8 +34,8 @@ const LibraryCardForm = ({ setRegMenu }) => {
             className="library-card-form__input"
             type="text"
             pattern="[0-9]+"
-            minlength="16"
-            maxlength="16"
+            minLength="16"
+            maxLength="16"
             size="16"
             name="bank-card"
             required
@@ -40,16 +48,16 @@ const LibraryCardForm = ({ setRegMenu }) => {
               required
               className="library-card-form__input library-card-form__card-init-data"
               type="text"
-              minlength="2"
-              maxlength="2"
+              minLength="2"
+              maxLength="2"
               pattern="[0-9]+"
             />
             <input
               required
               className="library-card-form__input library-card-form__card-init-data"
               type="text"
-              minlength="2"
-              maxlength="2"
+              minLength="2"
+              maxLength="2"
               pattern="[0-9]+"
             />
           </div>
@@ -61,8 +69,8 @@ const LibraryCardForm = ({ setRegMenu }) => {
             className="library-card-form__input library-card-form__card-init-data"
             type="text"
             name="cvc"
-            minlength="3"
-            maxlength="3"
+            minLength="3"
+            maxLength="3"
             pattern="[0-9]+"
           />
           <label
