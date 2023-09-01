@@ -6,7 +6,13 @@ import { regMenuContext } from "../../context/regMenuContext";
 const Favorites = () => {
   const [season, setSeason] = useState("winter");
   const [seasonSelected, setSeasonSelected] = useState("winter");
-  const { setSignUpWindow, setRegMenu, isAuth, authorisedUser } = useContext(regMenuContext);
+  const {
+    setSignUpWindow,
+    setRegMenu,
+    isAuth,
+    authorisedUser,
+    setAuthorisedUser,
+  } = useContext(regMenuContext);
   const selecterCircleId = "favorites__radio-label_checked";
   const customRadioId = "custom-radio_active";
   const timeout = 300;
@@ -30,13 +36,39 @@ const Favorites = () => {
     }, timeout);
   }
 
-  function buttonClickHandler() {
+  function buttonClickHandler(event) {
     if (!isAuth) {
       setRegMenu("flex");
       setSignUpWindow("Log In");
     } else if (isAuth && authorisedUser.libraryCard === false) {
       setRegMenu("flex");
       setSignUpWindow("Get card");
+    } else if (isAuth && authorisedUser.libraryCard === true) {
+      const author =
+        event.target.previousSibling.previousSibling.innerText.slice(3);
+      const bookName =
+        event.target.previousSibling.previousSibling.previousSibling.innerHTML;
+      const bookFullName = `${bookName}, ${author}`.toLowerCase();
+
+      if (!authorisedUser.books.includes(bookFullName)) {
+        authorisedUser.books.push(bookFullName.toLowerCase());
+        setAuthorisedUser(structuredClone(authorisedUser));
+        localStorage.setItem(
+          authorisedUser.email,
+          JSON.stringify(authorisedUser)
+        );
+      }
+    }
+  }
+
+  function buttonStyleHandler(bookName, author) {
+    if (
+      authorisedUser.books &&
+      authorisedUser.books.includes(
+        `${bookName}, ${author.slice(3)}`.toLowerCase()
+      )
+    ) {
+      return "book__button_active";
     }
   }
 
@@ -177,10 +209,18 @@ const Favorites = () => {
               {booksCollections[season].book1.bookReview}
             </p>
             <button
-              className="button book__button"
+              className={`button book__button ${buttonStyleHandler(
+                booksCollections[season].book1.bookName,
+                booksCollections[season].book1.bookAuthor
+              )}`}
               onClick={buttonClickHandler}
             >
-              Buy
+              {buttonStyleHandler(
+                booksCollections[season].book1.bookName,
+                booksCollections[season].book1.bookAuthor
+              )
+                ? "Own"
+                : "Buy"}
             </button>
             <img
               className="book__cover"
@@ -201,10 +241,18 @@ const Favorites = () => {
               {booksCollections[season].book2.bookReview}
             </p>
             <button
-              className="button book__button"
+              className={`button book__button ${buttonStyleHandler(
+                booksCollections[season].book2.bookName,
+                booksCollections[season].book2.bookAuthor
+              )}`}
               onClick={buttonClickHandler}
             >
-              Buy
+              {buttonStyleHandler(
+                booksCollections[season].book2.bookName,
+                booksCollections[season].book2.bookAuthor
+              )
+                ? "Own"
+                : "Buy"}
             </button>
             <img
               className="book__cover"
@@ -225,10 +273,18 @@ const Favorites = () => {
               {booksCollections[season].book3.bookReview}
             </p>
             <button
-              className="button book__button"
+              className={`button book__button ${buttonStyleHandler(
+                booksCollections[season].book3.bookName,
+                booksCollections[season].book3.bookAuthor
+              )}`}
               onClick={buttonClickHandler}
             >
-              Buy
+              {buttonStyleHandler(
+                booksCollections[season].book3.bookName,
+                booksCollections[season].book3.bookAuthor
+              )
+                ? "Own"
+                : "Buy"}
             </button>
             <img
               className="book__cover"
@@ -249,11 +305,19 @@ const Favorites = () => {
               {booksCollections[season].book4.bookReview}
             </p>
             <button
-              className="button book__button"
+              className={`button book__button ${buttonStyleHandler(
+                booksCollections[season].book4.bookName,
+                booksCollections[season].book4.bookAuthor
+              )}`}
               onClick={buttonClickHandler}
               // id="book__button_active"
             >
-              Buy
+              {buttonStyleHandler(
+                booksCollections[season].book4.bookName,
+                booksCollections[season].book4.bookAuthor
+              )
+                ? "Own"
+                : "Buy"}
             </button>
             <img
               className="book__cover"

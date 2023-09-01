@@ -67,10 +67,9 @@ const UserProfile = ({ authorisedUser, setRegMenu }) => {
         </div>
         <p className="profile-window__rented-books-header">Rented books</p>
         <ul className="profile-window__rented-books">
-          <li className="profile-window__book-name">
-            The Last Queen, Clive Irving
-          </li>
-          <li className="profile-window__book-name">Dominicana, Angie Cruz</li>
+          {authorisedUser.books.map((item, index) => {
+            return <li className="profile-window__book-name" key={index}>{item}</li>;
+          })}
         </ul>
         <div className="profile-window__card-wrapper">
           <p className="profile-window__card-number">Card number</p>
