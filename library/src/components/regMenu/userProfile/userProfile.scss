@@ -1,8 +1,9 @@
 @import "../../../styles/mixins.scss";
 
 .profile-window {
-  width: 37.5rem;
-  max-height: 100vh;
+  width: 37.5em;
+  height: 25em;
+  max-width: 100%;
   background-color: #fff;
   display: flex;
   position: relative;
@@ -11,13 +12,13 @@
 
 .profile-window__close {
   position: absolute;
-  right: 1.5rem;
-  top: 1.4rem;
+  right: 1.5em;
+  top: 1.4em;
   cursor: pointer;
 }
 
 .profile-window__avatar-area {
-  width: 10.625rem;
+  width: 10.625em;
   background-color: #0c0c0e;
   display: flex;
   align-items: center;
@@ -123,6 +124,9 @@
   flex-direction: column;
   gap: 0.63rem;
   padding-left: 3.1rem;
+  overflow-y: auto;
+  height: 5rem;
+  // max-height: 5rem;
 }
 
 .profile-window__book-name {
@@ -140,7 +144,7 @@
 .profile-window__card-wrapper {
   display: flex;
   gap: 0.94rem;
-  margin-top: 2.5rem;
+  margin-top: 0.7em;
   padding-left: 1.25rem;
   padding-bottom: 2.8rem;
 }
@@ -158,5 +162,40 @@
 .profile-window__copy-icon {
   position: relative;
   top: 0.3rem;
+  right: 0.3rem;
   cursor: pointer;
+}
+
+@media (max-width: 664px){
+  .profile-window{
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 490px){
+  .profile-window__header{
+    font-size: 2rem;
+  }
+
+  .profile-window__metrics{
+    font-size: 0.9rem;
+  }
+
+  .profile-window__rented-books-header{
+    font-size: 1.25rem;
+  }
+
+  .profile-window__card-number{
+    font-size: 1rem;
+  }
+
+  .profile-window__number{
+    font-size: 1rem;
+  }
+
+  .profile-window__book-name{
+    font-size: 0.9rem;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+  }
 }

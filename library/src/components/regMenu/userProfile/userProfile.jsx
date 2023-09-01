@@ -61,15 +61,19 @@ const UserProfile = ({ authorisedUser, setRegMenu }) => {
               height="21px"
             />
             <p className="profile-window__counter">
-              {authorisedUser? authorisedUser.books.length: '0'}
+              {authorisedUser ? authorisedUser.books.length : "0"}
             </p>
           </div>
         </div>
         <p className="profile-window__rented-books-header">Rented books</p>
         <ul className="profile-window__rented-books">
-          {authorisedUser.books.map((item, index) => {
-            return <li className="profile-window__book-name" key={index}>{item}</li>;
-          })}
+          {authorisedUser? authorisedUser.books.map((item, index) => {
+            return (
+              <li className="profile-window__book-name" key={index}>
+                {item}
+              </li>
+            );
+          }): ''}
         </ul>
         <div className="profile-window__card-wrapper">
           <p className="profile-window__card-number">Card number</p>

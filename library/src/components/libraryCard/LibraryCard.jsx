@@ -14,7 +14,7 @@ const LibraryCard = () => {
   const cardField = useRef(16);
 
   const cardCheckHandler = () => {
-    const reader = readerField.current.value;
+    const reader = readerField.current.value.split(' ');
     const card = cardField.current.value;
     for (let key in localStorage) {
       if (
@@ -23,7 +23,7 @@ const LibraryCard = () => {
         JSON.parse(localStorage.getItem(key))
       ) {
         const user = JSON.parse(localStorage.getItem(key));
-        if (user.firstName === reader && user.cardNumber === card) {
+        if (user.firstName === reader[0] && user.lastName === reader[1] && user.cardNumber === card) {
           setAuthorisedUser(user);
           setTimeout(() => {
             readerField.current.value = '';
