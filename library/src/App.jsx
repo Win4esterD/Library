@@ -20,6 +20,7 @@ function App() {
   const [authorisedUser, setAuthorisedUser] = useState('');
 
   function determineAuthorisedUser(){
+    console.log("200 points");
     for (let key in localStorage) {
       if (
         localStorage.getItem(key) &&

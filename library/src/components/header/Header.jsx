@@ -22,7 +22,6 @@ const Header = () => {
     }
   });
 
-
   return (
     <header>
       <div className="aligner header__aligner">
@@ -42,8 +41,17 @@ const Header = () => {
               className="profile-icon_authorised"
               style={{ display: isAuth === true ? "block" : "none" }}
             >
-              <p className="profile-icon_authorised__initials" title={authorisedUser? authorisedUser.firstName + ' ' + authorisedUser.lastName: ''}>
-                {authorisedUser? authorisedUser.firstName[0] + authorisedUser.lastName[0]: ''}
+              <p
+                className="profile-icon_authorised__initials"
+                title={
+                  authorisedUser
+                    ? authorisedUser.firstName + " " + authorisedUser.lastName
+                    : ""
+                }
+              >
+                {authorisedUser
+                  ? authorisedUser.firstName[0] + authorisedUser.lastName[0]
+                  : ""}
               </p>
             </div>
           </div>

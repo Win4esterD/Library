@@ -38,9 +38,6 @@ h1 {
   border-radius: 1.75rem;
   background: #FFF;
   cursor: pointer;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   position: relative;
 }
 
@@ -89,6 +86,10 @@ h1 {
 }
 
 @media (max-width: 1026px) {
+
+  .profile-icon_authorised{
+    margin-top: 0.6rem;
+  }
   .header__aligner {
     gap: 1.5rem;
   }
