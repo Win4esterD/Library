@@ -110,3 +110,83 @@
   margin-top: 1.88rem;
   padding-right: 2.3rem;
 }
+
+@media (max-width: 620px){
+  .library-card-window__text{
+    padding-left: 1.25rem;
+  }
+}
+
+@media(max-width: 574px){
+  .library-card-window__text{
+    max-width: 60%;
+  }
+}
+
+@media(max-width: 460px){
+  .library-card-window__header{
+    font-size: 1.5rem;
+  }
+
+  .library-card-window__text{
+    max-width: 50%;
+  }
+
+  .library-card-form__input{
+    width: 10rem;
+  }
+
+  .library-card-form__card-init-data{
+    width: 2.8125rem;
+  }
+
+  .library-card-form__button-and-price{
+    gap: 0.9rem;
+  }
+
+  .library-card-form__price{
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 388px){
+  .library-card-form__input{
+    width: 8.2rem;
+  }
+
+  .library-card-form__card-init-data{
+    width: 2.8125rem;
+  }
+
+  .library-card-form__button-and-price{
+    gap: 0.5rem;
+  }
+
+  .library-card-form__price {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 356px){
+  .library-card-form{
+    padding-left: 0.6rem;
+  }
+
+  .library-card-window__text{
+    padding-right: 0rem;
+  }
+
+  .library-card-window__text-block{
+    width: 60%;
+  }
+
+  .library-card-window__text{
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 336px){
+  .library-card-window__text-block{
+    width: 50%;
+  }
+}
