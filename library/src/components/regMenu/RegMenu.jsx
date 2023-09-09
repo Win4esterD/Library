@@ -155,9 +155,11 @@ const RegMenu = () => {
           setAuthorisedUser(user);
           setIsAuth(true);
           setRegMenu("none");
-        }
+        } 
       }
-    } else {
+    }
+
+    if (!(email in localStorage) || parsedJSON.password !== password) {
       alert("Wrong login or password");
     }
   };
