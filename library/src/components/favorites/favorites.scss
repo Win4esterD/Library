@@ -5,7 +5,6 @@
 }
 
 .favorites__separation-line{
-  // margin-top: 1.25rem;
   margin-top: 1.27rem;
 }
 
@@ -80,6 +79,7 @@
   gap: 2rem;
   justify-content: space-between;
   left: -1.2rem;
+  transition: opacity .5s ease-in-out;
 }
 
 
@@ -157,11 +157,16 @@
   left: 1.2rem;
 }
 
-#book__button_active{
+.book__button_active{
   border-color: #BB945F;
   color: #BB945F;
   border-radius: 1px;
   border-bottom-color: #BB945F;
+}
+
+.book__button_active:hover{
+  cursor: auto;
+  background-color: #fff;
 }
 
 #book__button_active:hover{
@@ -204,6 +209,15 @@
 @media (max-width: 1210px){
   .books {
     gap: 3rem;
+  }
+
+  .seasons-aligner{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
   }
 
   .favorites__pick {

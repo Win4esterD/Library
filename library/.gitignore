@@ -26,3 +26,13 @@ page-768open-burger.png
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# files
+
+regDropMenu.png
+modal_Register.png
+modal_Log In.png
+icon_profile after Auth.png
+modal_profile.png
+card-body.png
+buy_card.png

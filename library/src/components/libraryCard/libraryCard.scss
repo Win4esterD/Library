@@ -1,20 +1,19 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/mixins.scss";
 
-.library-card__aligner{
+.library-card__aligner {
   margin-top: 2.5rem;
   gap: 19.9rem;
 }
 
-.library-card__header{
+.library-card__header {
   margin-top: 3.46rem;
 }
 
-.library-card__separation-line{
+.library-card__separation-line {
   margin-top: 1.25rem;
 }
 
-
-.form-block__header{
+.form-block__header {
   color: #000;
   font-family: Inter;
   font-size: 1.875rem;
@@ -25,73 +24,79 @@
   text-align: center;
 }
 
-.form-border{
+.form-border {
   width: 37.3125rem;
   height: 23.9375rem;
-  border: 3px solid #BB945F;
-  background: #FFF;
+  border: 3px solid #bb945f;
+  background: #fff;
   margin-top: 1.88rem;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.library-form{
+.library-form {
   display: flex;
   flex-direction: column;
 }
 
-.library-form__inputs{
+.library-form__inputs {
   margin: 1.25rem auto 0 auto;
   width: 35rem;
   height: 17rem;
-  background-color: #BB945F;
+  background-color: #bb945f;
   display: flex;
   flex-direction: column;
 }
 
-.library-form__input:nth-child(3){
+.library-form__input:nth-child(3) {
   margin-top: 1.56rem;
 }
 
-.library-form__description{
+.library-form__description {
   @include formFont();
   max-width: 90%;
   margin-top: 1.25rem;
 }
 
-.library-form__input{
+.library-form__input {
   width: 32.5rem;
   height: 4.125rem;
   border-radius: 0.625rem;
   margin-top: 1.25rem;
 }
 
-.library-form__description, .library-form__input{
+.library-form__input[type="text"] {
+  color: #bb945f;
+  @include formFont();
+  padding-left: 1.25rem;
+  width: 31.2rem;
+}
+
+.library-form__description,
+.library-form__input {
   position: relative;
   left: 1.25rem;
 }
 
-.library-form__input::placeholder{
+.library-form__input::placeholder {
   @include formFont();
-  color: #8E8E8E;
-  padding-left: 1.25rem;
-  position: relative;
-  top: 0.2rem;
+  color: #8e8e8e;
+  // padding-left: 1.25rem;
+  // position: relative;
 }
 
-.library-form__input:focus{
+.library-form__input:focus {
   @include formFont();
 }
 
-
-.library-form__button{
+.library-form__button {
   @include contactHeader();
   text-transform: none;
   font-weight: 700;
   letter-spacing: 0.0625rem;
   line-height: normal;
   border-radius: 0.125rem;
-  border: 1px solid #0C0C0E;
-  background-color: #FFF;
+  border: 1px solid #0c0c0e;
+  background-color: #fff;
   margin-top: 1.25rem;
   margin-left: auto;
   margin-right: auto;
@@ -102,18 +107,18 @@
   align-items: center;
 }
 
-.library-form__button:hover{
+.library-form__button:hover {
   cursor: pointer;
-  background-color: #BB945F;
+  background-color: #bb945f;
   transition: 1.3s;
 }
 
-.get-card{
+.get-card {
   width: 30rem;
   max-width: 100%;
 }
 
-.get-card__call-to-action{
+.get-card__call-to-action {
   @include formFont();
   color: #000;
   line-height: normal;
@@ -121,30 +126,30 @@
   text-align: right;
 }
 
-.get-card__description{
+.get-card__description {
   @include sectionDescription();
   letter-spacing: 0.025rem;
   text-align: right;
   margin-top: 2.19rem;
 }
 
-.get-card__buttons{
+.get-card__buttons {
   display: flex;
   gap: 1.25rem;
   justify-content: flex-end;
   margin-top: 2.25rem;
 }
 
-.get-card__button{
+.get-card__button {
   border-radius: 0.125rem;
-  border: 1px solid #0C0C0E;
+  border: 1px solid #0c0c0e;
   display: flex;
   width: 4.6875rem;
   height: 1.875rem;
   padding: 0.625rem 0rem;
   justify-content: center;
   align-items: center;
-  color: #0C0C0E;
+  color: #0c0c0e;
   text-align: center;
   font-family: Inter;
   font-size: 0.625rem;
@@ -154,56 +159,81 @@
   letter-spacing: 0.0625rem;
 }
 
-.get-card__button:hover{
+.get-card__button:hover {
   cursor: pointer;
   transition: 1.3s;
-  background-color: #BB945F;
+  background-color: #bb945f;
 }
 
-@media (max-width: 1410px){
-  .form-border{
+.library-form__user-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 2.19rem;
+  margin-top: 0.94rem;
+}
+
+.library-form__metric-name {
+  @include profileMetrics();
+  font-size: 0.625rem;
+  letter-spacing: 0.0125rem;
+}
+
+.library-form__metric {
+  @include profileCounters();
+}
+
+.library-form__metric-img {
+  position: relative;
+  left: 0.4rem;
+}
+
+.library-form__metric {
+  position: relative;
+  right: 0.1rem;
+}
+
+@media (max-width: 1410px) {
+  .form-border {
     position: relative;
     left: 1.25rem;
   }
 
-  .get-card{
+  .get-card {
     position: relative;
     right: 1.25rem;
   }
 }
 
-@media (max-width: 1378px){
-  .library-card__aligner{
+@media (max-width: 1378px) {
+  .library-card__aligner {
     gap: 1.31rem;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 }
 
-@media (max-width: 1116px){
-
-  .get-card{
+@media (max-width: 1116px) {
+  .get-card {
     width: 56%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .library-card__aligner{
+  .library-card__aligner {
     justify-content: center;
   }
 
-  .get-card__call-to-action{
+  .get-card__call-to-action {
     text-align: center;
   }
 
-  .get-card__description{
+  .get-card__description {
     text-align: center;
   }
-
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .menu {
     width: 97.5%;
     max-width: 97.5%;
@@ -218,7 +248,7 @@
     width: 70%;
   }
 
-  .library-form__button{
+  .library-form__button {
     margin-top: 1rem;
   }
 
@@ -227,8 +257,8 @@
   }
 }
 
-@media (max-width: 642px){
-  .form-block{
+@media (max-width: 642px) {
+  .form-block {
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -236,38 +266,37 @@
     align-items: center;
   }
 
-  .form-border{
+  .form-border {
     max-width: 97%;
   }
 
-  .form-block__header{
+  .form-block__header {
     max-width: 97%;
   }
 
-  .library-form__inputs{
+  .library-form__inputs {
     max-width: 97%;
   }
 
-  .library-form__input{
+  .library-form__input {
     max-width: 92%;
   }
-  
 }
 
-@media (max-width: 397px){
-  .library-form__description{
+@media (max-width: 397px) {
+  .library-form__description {
     font-size: 1.3rem;
   }
 
-  .library-form__input{
+  .library-form__input {
     height: 3.7rem;
   }
 
-  .library-form__input::placeholder{
+  .library-form__input::placeholder {
     font-size: 1.3rem;
   }
 
-  .library-form__button{
+  .library-form__button {
     width: 12.2rem;
     font-size: 1rem;
   }

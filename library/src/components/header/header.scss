@@ -25,15 +25,45 @@ h1 {
 .header__burger-and-profile {
   position: relative;
   top: 0.7rem;
+  height: 3rem;
 }
 
 .profile-icon {
   cursor: pointer;
 }
 
+.profile-icon_authorised{
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 1.75rem;
+  background: #FFF;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile-icon_authorised__initials{
+  @include bookFont(400);
+  line-height: 1.25rem;
+  color: #BB945F;
+  letter-spacing: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .burger-menu {
   display: none;
 }
+
+.profile-img-wrapper{
+  width: 1.75rem;
+  height: 1.75rem;
+  // background-color: #FFF;
+  border-radius: 1rem;
+}
+
+
 
 @media (max-width: 1410px) {
   .header__aligner {
@@ -56,6 +86,10 @@ h1 {
 }
 
 @media (max-width: 1026px) {
+
+  .profile-icon_authorised{
+    margin-top: 0.6rem;
+  }
   .header__aligner {
     gap: 1.5rem;
   }
@@ -83,6 +117,10 @@ h1 {
     display: flex;
     z-index: 2;
     width: 2.8125rem;
+  }
+  .profile-icon{
+    position: relative;
+    top: 0.7rem;
   }
 
   
