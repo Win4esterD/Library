@@ -14,7 +14,7 @@ const LibraryCard = () => {
   const cardField = useRef(16);
 
   const cardCheckHandler = () => {
-    const reader = readerField.current.value.split(' ');
+    const reader = readerField.current.value.split(" ");
     const card = cardField.current.value;
     for (let key in localStorage) {
       if (
@@ -23,11 +23,15 @@ const LibraryCard = () => {
         JSON.parse(localStorage.getItem(key))
       ) {
         const user = JSON.parse(localStorage.getItem(key));
-        if (user.firstName === reader[0] && user.lastName === reader[1] && user.cardNumber === card) {
+        if (
+          user.firstName === reader[0] &&
+          user.lastName === reader[1] &&
+          user.cardNumber === card
+        ) {
           setAuthorisedUser(user);
           setTimeout(() => {
-            readerField.current.value = '';
-            cardField.current.value = '';
+            readerField.current.value = "";
+            cardField.current.value = "";
             setAuthorisedUser("");
           }, 10000);
         }
@@ -60,15 +64,27 @@ const LibraryCard = () => {
                   Brooklyn Public Library
                 </p>
                 <input
+                  defaultValue={
+                    !isAuth
+                      ? ""
+                      : `${authorisedUser.firstName} ${authorisedUser.lastName}`
+                  }
                   className="library-form__input"
                   type="text"
-                  placeholder="Reader's name"
+                  placeholder={
+                    !isAuth
+                      ? "Reader's name"
+                      : `${authorisedUser.firstName} ${authorisedUser.lastName}`
+                  }
                   ref={readerField}
                 />
                 <input
+                  defaultValue={!isAuth ? "" : authorisedUser.cardNumber}
                   className="library-form__input"
                   type="text"
-                  placeholder="Card number"
+                  placeholder={
+                    !isAuth ? "Card number" : authorisedUser.cardNumber
+                  }
                   ref={cardField}
                 />
               </div>

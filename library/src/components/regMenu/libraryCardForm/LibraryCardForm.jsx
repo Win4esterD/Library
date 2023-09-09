@@ -25,6 +25,7 @@ const LibraryCardForm = ({ setRegMenu, authorisedUser }) => {
               JSON.stringify(authorisedUser)
             );
             setRegMenu("none");
+            alert("Congratulations, library card created!");
           }}
         >
           <label className="library-card-form__label" htmlFor="bank-card">

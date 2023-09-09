@@ -150,13 +150,15 @@ const RegMenu = () => {
         ) {
           const user = JSON.parse(localStorage.getItem(item));
           user["authorised"] = true;
-          user['visits'] += 1;
+          user["visits"] += 1;
           localStorage.setItem(user.email, JSON.stringify(user));
           setAuthorisedUser(user);
           setIsAuth(true);
           setRegMenu("none");
         }
       }
+    } else {
+      alert("Wrong login or password");
     }
   };
 
@@ -227,12 +229,6 @@ const RegMenu = () => {
       onClick={() => setRegMenu("none")}
     >
       <div className="reg-window" onClick={(e) => e.stopPropagation()}>
-        {/* <img
-          className="reg-window__close"
-          src="./assets/img/icons/close_btn.svg"
-          alt="close button"
-          onClick={() => setRegMenu("none")}
-        /> */}
         {menus[SignUpWindow]}
       </div>
       {SignUpWindow === "My profile" ? (
@@ -241,7 +237,10 @@ const RegMenu = () => {
         ""
       )}
       {SignUpWindow === "Get card" ? (
-        <LibraryCardForm authorisedUser={authorisedUser} setRegMenu={setRegMenu} />
+        <LibraryCardForm
+          authorisedUser={authorisedUser}
+          setRegMenu={setRegMenu}
+        />
       ) : (
         ""
       )}
