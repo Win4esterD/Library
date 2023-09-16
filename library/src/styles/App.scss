@@ -1,0 +1,33 @@
+@import './mixins.scss';
+
+.separation-line{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-description{
+  @include sectionDescription();
+}
+
+.button{
+  width: 4.6875rem;
+  height: 1.875rem;
+  color: #0C0C0E;
+  @include button();
+}
+
+.button:hover{
+  cursor: pointer;
+  transition: 1.3s;
+  background-color: #BB945F;
+}
+
+.aligner{
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  scroll-behavior: smooth;
+}

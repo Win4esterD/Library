@@ -1,0 +1,354 @@
+@import '../../styles/mixins.scss';
+
+.favorites__header{
+  margin-top: 3.2rem;
+}
+
+.favorites__separation-line{
+  margin-top: 1.27rem;
+}
+
+.favorites__pick{
+  @include sectionDescription();
+  font-weight: 700;
+  margin-top: 1.9rem;
+  position: relative;
+  right: 36.4rem;
+}
+
+.favorites__seasons{
+  display: flex;
+  gap: 5.62rem;
+  margin-top: 1.6rem;
+  position: relative;
+  right: 21.9rem;
+}
+
+
+.favorites__button-wrapper:hover{
+  cursor: pointer;
+  background: #BB945F;
+  transition: .5s;
+  border-radius: 0.4rem;
+}
+
+.favorites__radio{
+  width: 1.0625rem;
+  height: 1.0625rem;
+  cursor: pointer;
+  stroke-width: 2px;
+  stroke: #000;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 1px;
+  position: relative;
+  top: 0.1rem;
+  -webkit-appearance: none;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid black;
+}
+
+.favorites__radio:checked{
+  display: none;
+}
+
+#custom-radio_active{
+  position: relative;
+  top: 0.1rem;
+  display: inline;
+}
+
+.favorites__radio-label{
+  @include sectionDescription();
+  padding-left: 1.25rem;
+  cursor: pointer;
+}
+
+#favorites__radio-label_checked{
+  font-weight: 700;
+}
+
+.books{
+  width: 85.1rem;
+  max-width: 97%;
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  left: -1.2rem;
+  transition: opacity .5s ease-in-out;
+}
+
+
+.books__book-block{
+  width: 34.375rem;
+  height: 34.6875rem;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.book_staff{
+  @include sectionHeader();
+  font-size: 1.25rem;
+  text-align: left;
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.book__line{
+  width: 3.75rem;
+  background-color: #BB945F;
+  position: relative;
+  left: 1.2rem;
+}
+
+.book__name{
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.book__name, .book__author{
+  @include bookFont(700);
+  text-align: left;
+  position: relative;
+  left: 1.2rem;
+  width: 100%;
+}
+
+.books__book-block:nth-child(3), .books__book-block:nth-child(4){
+  position: relative;
+  top: 0.3rem;
+
+  .book_staff{
+    margin-top: 1.1rem;
+  }
+
+  .book__review{
+    width: 22.3rem;
+  }
+
+  .book__line{
+    top: -0.3rem;
+  }
+}
+
+
+.book__review{
+  @include bookFont(400);
+  width: 23rem;
+  position: relative;
+  left: 1.2rem;
+  text-transform: capitalize;
+  margin-top: 1.4rem;
+}
+
+.book__cover{
+  position: absolute;
+  left: 24.4rem;
+  top: 16rem;
+}
+
+.book__button{
+  position: absolute;
+  bottom: 1rem;
+  left: 1.2rem;
+}
+
+.book__button_active{
+  border-color: #BB945F;
+  color: #BB945F;
+  border-radius: 1px;
+  border-bottom-color: #BB945F;
+}
+
+.book__button_active:hover{
+  cursor: auto;
+  background-color: #fff;
+}
+
+#book__button_active:hover{
+  cursor: auto;
+  background-color: #FFF;
+}
+
+.custom-radio{
+  display: none;
+}
+
+@media (max-width: 1410px){
+
+  .favorites__pick{
+    right: 30.7rem;
+  }
+
+  .favorites__seasons{
+    right: 16.3rem;
+  }
+
+  .books{
+    width: 74rem;
+    gap: 2rem;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 1244px){
+
+  .favorites__seasons{
+    right: 10rem;
+  }
+
+  .favorites__pick{
+    right: 24.7rem;
+  }
+}
+
+@media (max-width: 1210px){
+  .books {
+    gap: 3rem;
+  }
+
+  .seasons-aligner{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .favorites__pick {
+    right: 15.7rem;
+  }
+
+  .favorites__seasons {
+    right: 0.8rem;
+  }
+
+  .books{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px){
+
+  .favorites__pick {
+    right: 15.45rem;
+  }
+
+  .favorites__seasons {
+    right: 0.9rem;
+  }
+
+  .books{
+    gap: 2.42rem;
+  }
+
+  .books__book-block:nth-child(3){
+    top: -0.3rem;
+  }
+
+  .books__book-block:nth-child(4){
+    top: -0.3rem;
+  }
+}
+
+@media (max-width: 744px){
+  .favorites__pick{
+    text-align: left;
+    right: 0rem;
+    left: 1.2rem;
+    width: 15rem;
+  }
+  .favorites__seasons{
+    gap: 0rem;
+    justify-content: space-between;
+    width: 92%;
+  }
+}
+
+@media (max-width: 600px){
+
+  .favorites__radio-label{
+    padding-left: 0.5rem;
+  }
+
+  .books{
+    padding-left: 10%;
+  }
+
+  .books__book-block{
+    width: 100%;
+  }
+
+  .book__cover{
+    width: 8rem;
+    left: 75%;
+    top: 22.69rem;
+  }
+}
+
+@media (max-width: 526px){
+
+  .book__review{
+    width: 27rem;
+    max-width: 95%;
+  }
+  
+  .book__review{
+    font-size: 0.8rem;
+  }
+
+  .book__cover{
+    width: 6rem;
+    top: 25.69rem;
+  }
+
+  .book__name{
+    max-width: 90%;
+  }
+
+  .book__author{
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 460px){
+  .book__review{
+    margin-top: 0rem;
+  }
+
+  .book__name{
+    margin-top: 0rem;
+  }
+
+  .book__author{
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 420px){
+  .book__cover{
+    top: 27rem;
+  }
+}
+
+@media (max-width: 395px){
+  .book__review{
+    line-height: 2rem;
+  }
+
+  .favorites__radio-label{
+    font-size: 0.8rem;
+    padding-left: 0.2rem;
+  }
+}
+
+@media (max-width: 365px){
+  .book__cover{
+    left: 73%;
+  }
+}

@@ -1,0 +1,47 @@
+@import '../../styles/mixins.scss';
+
+.section-header{
+  @include sectionHeader();
+}
+
+.about__separation-line{
+  margin-top: 1.25rem;
+}
+
+.about__description{
+  margin-top: 2.5rem;
+}
+
+.about__header{
+  margin-top: 1.25rem;
+}
+
+@media(max-width: 950px){
+  .about__description{
+    max-width: 95%;
+    padding-left: 2.5%;
+  }
+}
+
+@media (max-width: 768px){
+
+  .about{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about__description{
+    width: 90%;
+    position: relative;
+    left: 2.4rem;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 358px){
+  .about__description{
+    left: 0rem;
+    text-align: center;
+  }
+}

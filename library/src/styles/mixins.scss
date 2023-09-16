@@ -1,0 +1,113 @@
+@mixin forumHeaders() {
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Forum;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+
+@mixin forumMiniHeader() {
+  color: #000;
+  text-align: center;
+  font-family: Forum;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+}
+
+@mixin sectionHeader() {
+  color: #0c0c0e;
+  text-align: center;
+  font-family: Forum;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+
+@mixin sectionDescription() {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+
+  @media (max-width: 494px) {
+    font-size: 1rem;
+  }
+}
+
+@mixin bookFont($fontWeight) {
+  color: #000;
+  font-family: Inter;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: $fontWeight;
+  line-height: 2.5rem;
+  letter-spacing: 0.125rem;
+}
+
+@mixin button() {
+  text-align: center;
+  font-family: Inter;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  background-color: #fff;
+  border: 1px solid;
+}
+
+@mixin contactHeader() {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem; /* 200% */
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+}
+
+@mixin formFont() {
+  font-family: Forum;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem; /* 166.667% */
+  letter-spacing: 0.0375rem;
+}
+
+@mixin profileMetrics() {
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 100% */
+  letter-spacing: 0.025rem;
+}
+
+@mixin profileCounters() {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.0125rem;
+}

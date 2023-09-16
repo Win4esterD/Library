@@ -1,0 +1,167 @@
+@import "../../styles/mixins.scss";
+
+header {
+  background-color: #0c0c0e;
+  height: 5.625rem;
+}
+
+.header__aligner {
+  display: flex;
+  gap: 15.6rem;
+  position: relative;
+  top: 1.2rem;
+}
+
+h1 {
+  color: #fff;
+  font-family: Forum;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.125rem;
+  letter-spacing: 0.0375rem;
+}
+
+.header__burger-and-profile {
+  position: relative;
+  top: 0.7rem;
+  height: 3rem;
+}
+
+.profile-icon {
+  cursor: pointer;
+}
+
+.profile-icon_authorised{
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 1.75rem;
+  background: #FFF;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile-icon_authorised__initials{
+  @include bookFont(400);
+  line-height: 1.25rem;
+  color: #BB945F;
+  letter-spacing: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.burger-menu {
+  display: none;
+}
+
+.profile-img-wrapper{
+  width: 1.75rem;
+  height: 1.75rem;
+  // background-color: #FFF;
+  border-radius: 1rem;
+}
+
+
+
+@media (max-width: 1410px) {
+  .header__aligner {
+    gap: 9.5rem;
+  }
+
+  .navigation-panel {
+    left: 8rem;
+  }
+}
+
+@media (max-width: 1220px) {
+  .navigation-panel {
+    left: 0rem;
+  }
+
+  .header__aligner {
+    gap: 3.5rem;
+  }
+}
+
+@media (max-width: 1026px) {
+
+  .profile-icon_authorised{
+    margin-top: 0.6rem;
+  }
+  .header__aligner {
+    gap: 1.5rem;
+  }
+
+  .navigation-panel {
+    display: none;
+  }
+
+  .header__aligner {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    padding-left: 2rem;
+  }
+
+  .header__burger-and-profile {
+    display: flex;
+    gap: 2.5rem;
+    z-index: 2;
+    width: 6.8rem;
+    top: 0;
+  }
+
+  .burger-menu {
+    display: flex;
+    z-index: 2;
+    width: 2.8125rem;
+  }
+  .profile-icon{
+    position: relative;
+    top: 0.7rem;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .header__aligner {
+    gap: 20rem;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 0rem;
+  }
+
+  .profile-icon {
+    position: relative;
+    z-index: 2;
+    width: 1.75rem;
+  }
+}
+
+@media (max-width: 744px) {
+  .header__aligner {
+    gap: 0rem;
+    justify-content: space-between;
+    max-width: 93%;
+    padding-left: 2.5%;
+  }
+}
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 341px) {
+  .header__burger-and-profile {
+    gap: 0.5rem;
+  }
+
+  .header__aligner {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,201 @@
+@import "../../../styles/mixins.scss";
+
+.profile-window {
+  width: 37.5em;
+  height: 25em;
+  max-width: 100%;
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  transform: translateX(-10%);
+}
+
+.profile-window__close {
+  position: absolute;
+  right: 1.5em;
+  top: 1.4em;
+  cursor: pointer;
+}
+
+.profile-window__avatar-area {
+  width: 10.625em;
+  background-color: #0c0c0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-window__avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-window__avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include contactHeader();
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #bb945f;
+}
+
+.profile-window__full-name-wrapper {
+  background-color: #ffffff;
+  margin-top: 0.94rem;
+  width: 7.5rem;
+  // height: 1.875rem;
+}
+
+.profile-window__full-name {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  text-transform: capitalize;
+  max-height: 30%;
+  max-width: 100%;
+  padding: 0.33rem 0 0.33rem 0;
+}
+
+.profile-window__info {
+  width: 26.875rem;
+}
+
+.profile-window__header {
+  @include forumHeaders();
+  line-height: 1.25rem;
+  letter-spacing: 0.05rem;
+  margin-top: 2.5rem;
+  position: relative;
+  text-align: left;
+  padding-left: 1.25rem;
+}
+
+.profile-window__stats-wrapper {
+  display: flex;
+  margin-top: 2.5rem;
+  gap: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.profile-window__stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-window__metrics {
+  @include profileMetrics();
+}
+
+.profile-window__metric-icons {
+  margin-top: 0.7rem;
+}
+
+.profile-window__counter {
+  @include profileCounters();
+  margin-top: 0.5rem;
+}
+
+.profile-window__rented-books-header {
+  color: #0c0c0e;
+  font-family: Inter;
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-top: 1.25rem;
+  padding-left: 1.2rem;
+}
+
+.profile-window__rented-books {
+  margin-top: 1.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.63rem;
+  padding-left: 3.1rem;
+  overflow-y: auto;
+  height: 5rem;
+  // max-height: 5rem;
+}
+
+.profile-window__book-name {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.125rem;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+.profile-window__card-wrapper {
+  display: flex;
+  gap: 0.94rem;
+  margin-top: 0.7em;
+  padding-left: 1.25rem;
+  padding-bottom: 2.8rem;
+}
+
+.profile-window__card-number,
+.profile-window__number {
+  @include profileMetrics();
+  letter-spacing: 0rem;
+}
+
+.profile-window__number {
+  color: #bb945f;
+}
+
+.profile-window__copy-icon {
+  position: relative;
+  top: 0.3rem;
+  right: 0.3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 664px){
+  .profile-window{
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 490px){
+  .profile-window__header{
+    font-size: 2rem;
+  }
+
+  .profile-window__metrics{
+    font-size: 0.9rem;
+  }
+
+  .profile-window__rented-books-header{
+    font-size: 1.25rem;
+  }
+
+  .profile-window__card-number{
+    font-size: 1rem;
+  }
+
+  .profile-window__number{
+    font-size: 1rem;
+  }
+
+  .profile-window__book-name{
+    font-size: 0.9rem;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+  }
+}
